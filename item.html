@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <title>物品 - 浮岛物语</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3" id="info">
+      </div>
+      
+    </div>
+  </div>
+
+  <script src="js/util.js"></script>
+  <script src="data/datatypes.js"></script>
+  <script src="data/skill.js"></script>
+  <script src="data/item.js"></script>
+  <script src="js/render.js"></script>
+  <script>
+    // redirect by URL argument
+    var selectedItem = null;
+    if (window.location.search !== "") {
+        let key = window.location.search.substring(1);
+        console.log(key);
+        // TODO
+    }
+  </script>
+  <script>
+    renderNavbar();
+    renderItem();
+    console.log(items["wood"]);
+  </script>
+</body>
+
+</html>

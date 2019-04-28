@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <title>技能 - 浮岛物语</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3" id="info">
+      </div>
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col table-responsive" id="industry-panel" style="background-color:#ffdbdb">
+            <table class="table" id="industry-table">
+              <tbody></tbody>
+            </table>
+          </div>
+          <div class="col table-responsive" id="economy-panel" style="background-color:#fff7db">
+            <table class="table" id="economy-table">
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col table-responsive" id="foraging-panel" style="background-color:#d3f6cc">
+            <table class="table" id="foraging-table">
+              <tbody></tbody>
+            </table>
+          </div>
+          <div class="col table-responsive" id="magic-panel" style="background-color:#dbf5ff">
+            <table class="table" id="magic-table">
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/util.js"></script>
+  <script src="data/datatypes.js"></script>
+  <script src="data/skill.js"></script>
+  <script src="data/item.js"></script>
+  <script src="js/render.js"></script>
+  <script>
+    // redirect by URL argument
+    var selectedSkill = null;
+    // if (window.location.search !== "") {
+    //   try {
+    //     let skill = getQueryVariable("skill");
+    //     // selectedSkill = skill;
+    //   } catch (err) {
+    //     // console.error(err.message);
+    //     window.location.replace(window.location.pathname);
+    //   }
+    // }
+  </script>
+  <script>
+    renderNavbar();
+    renderSkills();
+    unfoldMacro("解锁#{skill/sewing}和#{skill/smelting}哈哈哈");
+    // unfoldMacro("解锁");
+  </script>
+</body>
+
+</html>
