@@ -6,39 +6,39 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/forager.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-3" id="info">
+      <div class="col-lg-3 fixed-top" id="info" style="top:200px">
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-9 offset-lg-3">
         <div class="row">
-          <div class="col table-responsive" id="industry-panel" style="background-color:#ffdbdb">
-            <table class="table" id="industry-table">
-              <tbody></tbody>
+          <div id="industry-panel">
+            <table class="table-borderless" style="margin-right: 0">
+              <tbody id="industry-table"></tbody>
             </table>
           </div>
-          <div class="col table-responsive" id="economy-panel" style="background-color:#fff7db">
-            <table class="table" id="economy-table">
-              <tbody></tbody>
+          <div id="economy-panel">
+            <table class="table-borderless">
+              <tbody id="economy-table"></tbody>
             </table>
           </div>
         </div>
         <div class="row">
-          <div class="col table-responsive" id="foraging-panel" style="background-color:#d3f6cc">
-            <table class="table" id="foraging-table">
-              <tbody></tbody>
+          <div id="foraging-panel">
+            <table class="table-borderless">
+              <tbody id="foraging-table"></tbody>
             </table>
           </div>
-          <div class="col table-responsive" id="magic-panel" style="background-color:#dbf5ff">
-            <table class="table" id="magic-table">
-              <tbody></tbody>
+          <div id="magic-panel">
+            <table class="table-borderless">
+              <tbody id="magic-table"></tbody>
             </table>
           </div>
         </div>
@@ -52,23 +52,10 @@
   <script src="data/item.js"></script>
   <script src="js/render.js"></script>
   <script>
-    // redirect by URL argument
-    var selectedSkill = null;
-    // if (window.location.search !== "") {
-    //   try {
-    //     let skill = getQueryVariable("skill");
-    //     // selectedSkill = skill;
-    //   } catch (err) {
-    //     // console.error(err.message);
-    //     window.location.replace(window.location.pathname);
-    //   }
-    // }
-  </script>
-  <script>
     renderNavbar();
-    renderSkills();
-    unfoldMacro("解锁#{skill/sewing}和#{skill/smelting}哈哈哈");
-    // unfoldMacro("解锁");
+    let renderer = new SkillRenderer();
+    renderer.render();
+    renderer.handleQuery(window.location.search, "skill");
   </script>
 </body>
 

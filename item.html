@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/forager.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -14,10 +15,69 @@
 <body>
 
   <div class="container-fluid">
+
     <div class="row">
-      <div class="col-lg-3" id="info">
+      <div class="col-lg-3 fixed-top" id="info" style="top:200px">
       </div>
-      
+      <div class="col-lg-9 offset-lg-3">
+        <!--raw-->
+        <div class="card">
+          <div class="card-header">原材料</div>
+          <div class="card-body">
+            <div class="row" id="raw-material-panel"></div>
+            <div class="row" id="craftable-panel"></div>
+            <div class="row" id="bottled-panel"></div>
+            <div class="row" id="gem-panel"></div>
+            <div class="row" id="arch-panel"></div>
+          </div>
+        </div>
+
+        <!--raw-->
+        <div class="card">
+          <div class="card-header">农业</div>
+          <div class="card-body">
+            <div class="row" id="farm-raw-panel"></div>
+            <div class="row" id="seed-panel"></div>
+            <div class="row" id="cook-panel"></div>
+          </div>
+        </div>
+
+        <!--tool-->
+        <div class="card">
+          <div class="card-header">工具</div>
+          <div class="card-body">
+            <div class="row" id="pickaxe-panel"></div>
+            <div class="row" id="shovel-panel"></div>
+            <div class="row" id="sword-panel"></div>
+            <div class="row" id="bow-panel"></div>
+            <div class="row" id="rod-panel"></div>
+          </div>
+        </div>
+
+        <!--equipment-->
+        <div class="card">
+          <div class="card-header">装备</div>
+          <div class="card-body">
+            <div class="row" id="backpack-panel"></div>
+            <div class="row" id="wallet-panel"></div>
+            <div class="row" id="glove-panel"></div>
+            <div class="row" id="boot-panel"></div>
+            <div class="row" id="book-panel"></div>
+            <div class="row" id="amulet-panel"></div>
+            <div class="row" id="artifact-panel"></div>
+            <div class="row" id="seal-panel"></div>
+          </div>
+        </div>
+
+        <!--magic-->
+        <div class="card">
+          <div class="card-header">魔法</div>
+          <div class="card-body">
+            <div class="row" id="potion-panel"></div>
+            <div class="row" id="scroll-panel"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -27,18 +87,10 @@
   <script src="data/item.js"></script>
   <script src="js/render.js"></script>
   <script>
-    // redirect by URL argument
-    var selectedItem = null;
-    if (window.location.search !== "") {
-        let key = window.location.search.substring(1);
-        console.log(key);
-        // TODO
-    }
-  </script>
-  <script>
     renderNavbar();
-    renderItem();
-    console.log(items["wood"]);
+    let renderer = new ItemRenderer();
+    renderer.render();
+    renderer.handleQuery(window.location.search, "item");
   </script>
 </body>
 

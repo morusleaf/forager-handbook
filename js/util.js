@@ -36,7 +36,7 @@ function getCategoryByName(categoryName) {
   switch (categoryName) {
     case "skill": return skills; break;
     case "item": return items; break;
-    default: throw ReferenceError(categoryName + " does not match any category");
+    default: throw new ReferenceError(categoryName + " does not match any category");
   }
 }
 
@@ -50,7 +50,7 @@ function getCategoryByName(categoryName) {
 function lookupName(name) {
   const namePattern = new RegExp('#{([^}]*)}');
   let matches = namePattern.exec(name);
-  if (matches === null) throw FormatError(name + " should follow format #{...}");
+  if (matches === null) throw new FormatError(name + " should follow format #{...}");
   let st = matches[1];
 
   const innerPattern = new RegExp('(.*)/(.*)');
@@ -63,7 +63,7 @@ function lookupName(name) {
     let elementName = matches[2];
     let category = getCategoryByName(categoryName);
     if (!(elementName in category)) {
-      throw ReferenceError(elementName + " does not exist in " + categoryName);
+      throw new ReferenceError(elementName + " does not exist in " + categoryName);
     }
     return category[elementName];
   }

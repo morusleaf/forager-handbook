@@ -1,0 +1,27 @@
+img {
+    image-rendering: pixelated; /* pixel aesthetics */
+}
+
+.icon {
+    margin: 0px;
+    cursor: pointer;
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+/* reference: https://stackoverflow.com/questions/14149360/text-on-image-mouseover */
+.hover-wrapper:hover {
+    transform: scale(1.1)
+}
+
+.icon {
+    /* display: inline-block; */
+    float: left;
+}
+
+.inline-image {
+    height: 1em;
+}

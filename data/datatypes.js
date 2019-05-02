@@ -14,21 +14,57 @@ class ForagerObject {
     }
   }
 
-  thumbnailDOM() {
-    let $card = $("<div>", {
-      class: "card-transparent border-dark",
+  thumbnailDOM(width, height, margin, scale, hover=false) {
+    let hoverclass = hover ? "hover-wrapper" : "";
+    let $pane = $("<div>", {
+      class: `icon ${hoverclass}`,
+      id: this.key,
+    });
+    let $frame = $("<div>", {
+      class: `align-center `,
+      style: `width:${width}px; height:${height}px; margin:${margin}px`
     });
     let $img = $("<img>", {
-      class: "card-img-top",
+      class: "img-fluid mx-auto",
       src: this.img(),
-      // alt: this.name,
-      style: "width:50%"
+      alt: this.name,
+      style: "visibility: hidden"
     });
-    let $tag = $("<p>", {
+    /**
+    * Can not figure out how to scale a image according to natural size and
+    * center it in parent container, so I used this ad-hoc approach instead.
+    */
+    $img.on("load", function() {
+      let w = $img[0].naturalWidth;
+      let h = $img[0].naturalHeight;
+      $img.width(w*scale);
+      $img.height(h*scale);
+      $img.css("visibility", "visible");
+    });
+    $frame.append($img);
+    $pane.append($frame);
+    return $pane;
+  }
+
+  referThumbnailDOM() {
+    return $(`#${this.key}`);
+  }
+
+  infoDOM($img) {
+    let $card = $("<div>", { class: "card" });
+    let $imgDiv = $("<div>", {class: "mx-auto align-center"});
+    $img.appendTo($imgDiv);
+    let $title = $("<p>", {
       class: "card-title text-center",
       text: this.name
     });
-    return $card.append($img);
+    let $desc = $("<ul>", {
+      class: "list-group list-group-flush forager-desc"
+    });
+    this.forEachDesc(function (line) {
+      $("<li>", { class: "list-group-item" }).html(unfoldMacro(line)).appendTo($desc);
+    });
+    return $card.append($imgDiv, $title, $desc);
   }
 
   // img()
@@ -36,11 +72,9 @@ class ForagerObject {
 }
 
 class Skill extends ForagerObject {
-  constructor({ key, name, num, unlock = [], desc = [] } = {}) {
-    // num;
+  constructor({ key, name, unlock = [], desc = [] } = {}) {
     // _unlock;
     super({ key, name, desc });
-    this.num = num;
     this._unlock = unlock;
   }
 
@@ -51,49 +85,31 @@ class Skill extends ForagerObject {
   }
 
   img() {
-    return `img/skill/${this.num}.png`;
+    return `img/skill/${this.key}.png`;
   }
 
   href() {
-    return `<a href="skill.html?${this.key}">${this.name}</a>`;
+    let icon = `<img src="img/skill/${this.key}.png" class="inline-image">`;
+    return `<a href="skill.html?${this.key}">${icon}${this.name}</a>`;
   }
 
-  infoDOM() {
-    let $card = $("<div>", { class: "card" });
-    let $img = $("<img>", {
-      class: "card-img-top mx-auto",
-      src: this.img(),
-      // alt: this.name,
-      style: "width:50%"
-    });
-    let $title = $("<p>", {
-      class: "card-title text-center",
-      text: this.name
-    });
-    let $desc = $("<ul>", {
-      class: "list-group list-group-flush"
-    });
+  infoDOM($img) {
+    let $card = super.infoDOM($img);
+    let $desc = $card.children(".forager-desc");
     this.forEachUnlock(function (line) {
-      $("<li>", { class: "list-group-item" }).html("解锁" + unfoldMacro(line)).appendTo($desc);
+      $("<li>", { class: "list-group-item" }).html("解锁" + unfoldMacro(line)).prependTo($desc);
     });
-    this.forEachDesc(function (line) {
-      $("<li>", { class: "list-group-item" }).html(unfoldMacro(line)).appendTo($desc);
-    });
-    return $card.append($img, $title, $desc);
+    return $card;
   }
 }
 
 class Item extends ForagerObject {
-  // num
   // value
   // _usage
-  // _related
-  constructor({ key, name, num, value, usage = [], related = [], desc = [] } = {}) {
+  constructor({ key, name, value, usage = [], desc = [] } = {}) {
     super({ key, name, desc });
-    this.num = num;
     this.value = value;
     this._usage = usage;
-    this._related = related;
   }
 
   forEachUsage(callback) {
@@ -102,48 +118,24 @@ class Item extends ForagerObject {
     }
   }
 
-  forEachRelated(callback) {
-    for (let line of this._related) {
-      callback(line);
-    }
-  }
-
   img() {
-    return `img/item/${this.num}.png`;
+    return `img/item/${this.key}.png`;
   }
 
   href() {
-    return `<a href="item.html?${this.key}">${this.name}</a>`;
+    let icon = `<img src="img/item/${this.key}.png" class="inline-image">`;
+    return `<a href="item.html?${this.key}">${icon}${this.name}</a>`;
+  }
+
+  infoDOM($img) {
+    let $card = super.infoDOM($img);
+    let $desc = $card.children(".forager-desc");
+    $("<li>", { class: "list-group-item" }).html("价值:" + this.value).prependTo($desc);
+    return $card;
   }
 }
 
-class RawItem extends Item {
-  constructor({ key, name, num, value, usage = [], related = [], desc = [] } = {}) {
-    super({ key, name, num, value, usage, related, desc });
-  }
-
-  infoDOM() {
-    let $card = $("<div>", { class: "card" });
-    let $img = $("<img>", {
-      class: "card-img-top mx-auto",
-      src: this.img(),
-      // alt: this.name,
-      style: "width:50%"
-    });
-    let $title = $("<p>", {
-      class: "card-title text-center",
-      text: this.name
-    });
-    let $desc = $("<ul>", {
-      class: "list-group list-group-flush"
-    });
-    $("<li>", { class: "list-group-item" }).html("价值:" + this.value).appendTo($desc);
-    for (let line of this.desc) {
-      $("<li>", { class: "list-group-item" }).html(unfoldMacro(line)).appendTo($desc);
-    }
-    return $card.append($img, $title, $desc);
-  }
-}
+class RawItem {}
 
 class Craftable { }
 
@@ -155,3 +147,5 @@ class Food { }
  * mineral: energy
  * gem:
  */
+
+ class Struct {}
