@@ -1,5 +1,9 @@
 
 function renderNavbar() {
+  function newDropdownItem(hrefValue, textValue) {
+    return $("<a>", { class: "dropdown-item", href: hrefValue }).text(textValue);
+  }
+
   let $nav = $("<nav>", { class: "navbar navbar-expand-sm bg-dark navbar-dark" });
   $nav.append($("<a>", { class: "navbar-brand", href: "index.html" }).text("浮岛生存手册"));
   let $ul = $("<ul>", { class: "navbar-nav" }).appendTo($nav);
@@ -10,7 +14,15 @@ function renderNavbar() {
   let $item = $("<li>", { class: "nav-item dropdown" }).appendTo($ul);
   $("<a>", { class: "nav-link dropdown-toggle", href: "item.html", "data-toggle": "dropdown" }).text("物品").appendTo($item);
   let $itemMenu = $("<div>", { class: "dropdown-menu" }).appendTo($item);
-  $("<a>", { class: "dropdown-item", href: "item.html#raw" }).text("原料").appendTo($itemMenu);
+  newDropdownItem("item.html#material-section", "原料").appendTo($itemMenu);
+  newDropdownItem("item.html#farm-section", "农业").appendTo($itemMenu);
+  newDropdownItem("item.html#tool-section", "工具").appendTo($itemMenu);
+  newDropdownItem("item.html#equipment-section", "装备").appendTo($itemMenu);
+  newDropdownItem("item.html#magic-section", "魔法").appendTo($itemMenu);
+  // structure
+  let $struct = $("<li>", { class: "nav-item" }).appendTo($ul);
+  $("<a>", { class: "nav-link", href: "struct.html" }).text("建筑").appendTo($struct);
+
   $(document.body).prepend($nav);
 }
 
@@ -377,10 +389,10 @@ class ItemRenderer extends ForagerRenderer {
       "#{item/skull-seal}",
       "#{item/frozen-seal}",
       "#{item/fire-seal}",
-      "#{item/ancient galaxy-seal}",
-      "#{item/skull galaxy-seal}",
-      "#{item/frozen galaxy-seal}",
-      "#{item/fire galaxy-seal}",
+      "#{item/ancient-galaxy-seal}",
+      "#{item/skull-galaxy-seal}",
+      "#{item/frozen-galaxy-seal}",
+      "#{item/fire-galaxy-seal}",
       "#{item/museum-seal}",
     ];
     this.renderPanel(backpackLayout, $("#backpack-panel"));
@@ -414,5 +426,73 @@ class ItemRenderer extends ForagerRenderer {
     ];
     this.renderPanel(potionLayout, $("#potion-panel"));
     this.renderPanel(scrollLayout, $("#scroll-panel"));
+  }
+}
+
+
+
+class StructRenderer extends ForagerRenderer {
+  constructor() {
+    super($("#info"));
+  }
+
+  viewObject(object) {
+    this.$info.empty();
+    if (object === null) return;
+    let $icon = object.thumbnailDOM(200, 200, 4, 4, true);
+    let $card = object.infoDOM($icon);
+    this.$info.append($card);
+  }
+
+  renderPanel(layout, $panel) {
+    for (let name of layout) {
+      let struct = lookupName(name);
+      let $icon = struct.thumbnailDOM(100, 100, 0, 3, true);
+      this.linkIcon($icon, struct);
+      $panel.append($icon);
+    }
+  }
+
+  render() {
+    let industrialLayout = [
+      "#{struct/furnace}",
+      "#{struct/forge}",
+      "#{struct/sewing-station}",
+      "#{struct/mining-rod}",
+      "#{struct/offshore-drill}",
+      "#{struct/flower-press}",
+      "#{struct/factory}",
+      "#{struct/power-plant}",
+      "#{struct/ballista}",
+    ];
+
+    let farmingLayout = [
+      "#{struct/bridge}",
+      "#{struct/fish-trap}",
+      "#{struct/torch}",
+      "#{struct/brazier}",
+      "#{struct/windmill}",
+      "#{struct/sprinkler}",
+      "#{struct/cookpot}",
+      "#{struct/quarry}",
+    ];
+    let economicLayout = [
+      "#{struct/vault}",
+      "#{struct/market}",
+      "#{struct/bank}",
+      "#{struct/lighthouse}",
+      "#{struct/slot-machine}",
+    ];
+    let magicalLayout = [
+      "#{struct/inscription-table}",
+      "#{struct/cauldron}",
+      "#{struct/shrine}",
+      "#{struct/spirit-crystal}",
+    ];
+
+    this.renderPanel(industrialLayout, $("#industrial-panel"));
+    this.renderPanel(farmingLayout, $("#farming-panel"));
+    this.renderPanel(economicLayout, $("#economic-panel"));
+    this.renderPanel(magicalLayout, $("#magical-panel"));
   }
 }

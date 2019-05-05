@@ -17,12 +17,12 @@
   <div class="container-fluid">
 
     <div class="row">
-      <div class="col-lg-3 fixed-top" id="info" style="top:200px">
+      <div class="col-sm-3 fixed-top" id="info" style="top:200px">
       </div>
-      <div class="col-lg-9 offset-lg-3">
+      <div class="col-sm-9 offset-sm-3">
         <!--raw-->
         <div class="card">
-          <div class="card-header">原材料</div>
+          <div class="card-header" id="material-section">原料</div>
           <div class="card-body">
             <div class="row" id="raw-material-panel"></div>
             <div class="row" id="craftable-panel"></div>
@@ -34,7 +34,7 @@
 
         <!--raw-->
         <div class="card">
-          <div class="card-header">农业</div>
+          <div class="card-header" id="farm-section">农业</div>
           <div class="card-body">
             <div class="row" id="farm-raw-panel"></div>
             <div class="row" id="seed-panel"></div>
@@ -44,7 +44,7 @@
 
         <!--tool-->
         <div class="card">
-          <div class="card-header">工具</div>
+          <div class="card-header" id="tool-section">工具</div>
           <div class="card-body">
             <div class="row" id="pickaxe-panel"></div>
             <div class="row" id="shovel-panel"></div>
@@ -56,7 +56,7 @@
 
         <!--equipment-->
         <div class="card">
-          <div class="card-header">装备</div>
+          <div class="card-header" id="equipment-section">装备</div>
           <div class="card-body">
             <div class="row" id="backpack-panel"></div>
             <div class="row" id="wallet-panel"></div>
@@ -71,7 +71,7 @@
 
         <!--magic-->
         <div class="card">
-          <div class="card-header">魔法</div>
+          <div class="card-header" id="magic-section">魔法</div>
           <div class="card-body">
             <div class="row" id="potion-panel"></div>
             <div class="row" id="scroll-panel"></div>
@@ -85,6 +85,7 @@
   <script src="data/datatypes.js"></script>
   <script src="data/skill.js"></script>
   <script src="data/item.js"></script>
+  <script src="data/struct.js"></script>
   <script src="js/render.js"></script>
   <script>
     renderNavbar();

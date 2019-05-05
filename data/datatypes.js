@@ -1,3 +1,14 @@
+Function.prototype.clone = function() {
+  var that = this;
+  var temp = function temporary() { return that.apply(this, arguments); };
+  for(var key in this) {
+      if (this.hasOwnProperty(key)) {
+          temp[key] = this[key];
+      }
+  }
+  return temp;
+};
+
 class ForagerObject {
   // key;
   // name;
@@ -21,7 +32,7 @@ class ForagerObject {
       id: this.key,
     });
     let $frame = $("<div>", {
-      class: `align-center `,
+      class: `align-center`,
       style: `width:${width}px; height:${height}px; margin:${margin}px`
     });
     let $img = $("<img>", {
@@ -37,6 +48,7 @@ class ForagerObject {
     $img.on("load", function() {
       let w = $img[0].naturalWidth;
       let h = $img[0].naturalHeight;
+      scale = Math.min(scale, width/w, height/h);
       $img.width(w*scale);
       $img.height(h*scale);
       $img.css("visibility", "visible");
@@ -67,8 +79,17 @@ class ForagerObject {
     return $card.append($imgDiv, $title, $desc);
   }
 
-  // img()
-  // href()
+  href(prefix, showIcon, alias) {
+    if (showIcon === undefined) showIcon = true;
+    let icon = showIcon ? `<img src="img/${prefix}/${this.key}.png" class="inline-image">` : "";
+    let text = (alias === undefined) ? this.name : alias;
+    return `<a href="${prefix}.html?${this.key}">${icon}${text}</a>`;
+  }
+
+  img(prefix) {
+    return `img/${prefix}/${this.key}.png`;
+  }
+  // newInstance(data)
 }
 
 class Skill extends ForagerObject {
@@ -85,12 +106,11 @@ class Skill extends ForagerObject {
   }
 
   img() {
-    return `img/skill/${this.key}.png`;
+    return super.img("skill");
   }
 
-  href() {
-    let icon = `<img src="img/skill/${this.key}.png" class="inline-image">`;
-    return `<a href="skill.html?${this.key}">${icon}${this.name}</a>`;
+  href(showIcon, alias) {
+    return super.href("skill", showIcon, alias);
   }
 
   infoDOM($img) {
@@ -100,6 +120,10 @@ class Skill extends ForagerObject {
       $("<li>", { class: "list-group-item" }).html("解锁" + unfoldMacro(line)).prependTo($desc);
     });
     return $card;
+  }
+
+  static newInstance(data) {
+    return new Skill(data);
   }
 }
 
@@ -119,12 +143,11 @@ class Item extends ForagerObject {
   }
 
   img() {
-    return `img/item/${this.key}.png`;
+    return super.img("item");
   }
 
-  href() {
-    let icon = `<img src="img/item/${this.key}.png" class="inline-image">`;
-    return `<a href="item.html?${this.key}">${icon}${this.name}</a>`;
+  href(showIcon, alias) {
+    return super.href("item", showIcon, alias);
   }
 
   infoDOM($img) {
@@ -132,6 +155,10 @@ class Item extends ForagerObject {
     let $desc = $card.children(".forager-desc");
     $("<li>", { class: "list-group-item" }).html("价值:" + this.value).prependTo($desc);
     return $card;
+  }
+
+  static newInstance(data) {
+    return new Item(data);
   }
 }
 
@@ -148,4 +175,60 @@ class Food { }
  * gem:
  */
 
- class Struct {}
+class Struct extends ForagerObject {
+  // value
+  // _usage
+  constructor({ key, name, ingrd = [], prod = [], desc = [] } = {}) {
+    super({ key, name, desc });
+    this._ingrd = ingrd;
+    this._prod = prod;
+  }
+
+  img() {
+    return super.img("struct");
+  }
+
+  href(showIcon, alias) {
+    return super.href("struct", showIcon, alias);
+  }
+
+  forEachProduct(callback) {
+    for (let line of this._prod) {
+      callback(line);
+    }
+  }
+
+  forEachIngredient(callback) {
+    for (let line of this._ingrd) {
+      callback(line);
+    }
+  }
+
+  infoDOM($img) {
+    let $card = super.infoDOM($img);
+    let $desc = $card.children(".forager-desc");
+    if (this._prod && this._prod.length != 0) {
+      let products = [];
+      this.forEachProduct(function(st) {
+        let object = lookupName(st);
+        products.push(object.href());
+      });
+      $("<li>", { class: "list-group-item" }).html("产物:" + products.join(" ")).prependTo($desc);
+    }
+    if (this._ingrd && this._ingrd.length != 0) {
+      let ingredients = [];
+      this.forEachIngredient(function(element) {
+        let st = element.name;
+        let quantity = element.qty;
+        let object = lookupName(st);
+        ingredients.push(`${object.href()}&times;${quantity}`);
+      });
+      $("<li>", { class: "list-group-item" }).html("材料:" + ingredients.join(" ")).prependTo($desc);
+    }
+    return $card;
+  }
+
+  static newInstance(data) {
+    return new Struct(data);
+  }
+}

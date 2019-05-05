@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <title>建筑 - 浮岛物语</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/forager.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-sm-3 fixed-top" id="info" style="top:200px">
+      </div>
+      <div class="col-sm-9 offset-sm-3">
+        <br />
+        <div class="row" id="industrial-panel"></div>
+        <div class="row" id="farming-panel"></div>
+        <div class="row" id="economic-panel"></div>
+        <div class="row" id="magical-panel"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/util.js"></script>
+  <script src="data/datatypes.js"></script>
+  <script src="data/skill.js"></script>
+  <script src="data/item.js"></script>
+  <script src="data/struct.js"></script>
+  <script src="js/render.js"></script>
+  <script>
+    renderNavbar();
+    let renderer = new StructRenderer();
+    renderer.render();
+    renderer.handleQuery(window.location.search, "struct");
+  </script>
+</body>
+
+</html>
