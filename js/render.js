@@ -14,14 +14,26 @@ function renderNavbar() {
   let $item = $("<li>", { class: "nav-item dropdown" }).appendTo($ul);
   $("<a>", { class: "nav-link dropdown-toggle", href: "item.html", "data-toggle": "dropdown" }).text("物品").appendTo($item);
   let $itemMenu = $("<div>", { class: "dropdown-menu" }).appendTo($item);
-  newDropdownItem("item.html#material-section", "原料").appendTo($itemMenu);
+  newDropdownItem("item.html#material-section", "原料与工业品").appendTo($itemMenu);
   newDropdownItem("item.html#farm-section", "农业").appendTo($itemMenu);
-  newDropdownItem("item.html#tool-section", "工具").appendTo($itemMenu);
+  newDropdownItem("item.html#tool-section", "工具与武器").appendTo($itemMenu);
   newDropdownItem("item.html#equipment-section", "装备").appendTo($itemMenu);
-  newDropdownItem("item.html#magic-section", "魔法").appendTo($itemMenu);
+  newDropdownItem("item.html#magic-section", "药剂与卷轴").appendTo($itemMenu);
   // structure
   let $struct = $("<li>", { class: "nav-item" }).appendTo($ul);
   $("<a>", { class: "nav-link", href: "struct.html" }).text("建筑").appendTo($struct);
+  // land
+  let $land = $("<li>", { class: "nav-item" }).appendTo($ul);
+  $("<a>", { class: "nav-link", href: "land.html" }).text("地块").appendTo($land);
+  // buff
+  let $buff = $("<li>", { class: "nav-item" }).appendTo($ul);
+  $("<a>", { class: "nav-link", href: "buff.html" }).text("buff").appendTo($buff);
+  // obj
+  let $obj = $("<li>", { class: "nav-item" }).appendTo($ul);
+  $("<a>", { class: "nav-link", href: "obj.html" }).text("物体").appendTo($obj);
+  // feat
+  let $feat = $("<li>", { class: "nav-item" }).appendTo($ul);
+  $("<a>", { class: "nav-link", href: "feat.html" }).text("成就").appendTo($feat);
 
   $(document.body).prepend($nav);
 }
@@ -88,10 +100,10 @@ class SkillRenderer extends ForagerRenderer {
       let $tr = $("<tr>");
       $table.append($tr);
       for (let name of line) {
-        let skill = lookupName(name);
+        let object = lookupName(name);
         let $td = $("<td>", { class: "text-center" });
-        let $icon = skill.thumbnailDOM(64, 64, 4, 2, true);
-        this.linkIcon($icon, skill);
+        let $icon = object.thumbnailDOM(64, 64, 4, 2, true);
+        this.linkIcon($icon, object);
         $td.append($icon);
         $tr.append($td);
       }
@@ -143,16 +155,16 @@ class ItemRenderer extends ForagerRenderer {
   viewObject(object) {
     this.$info.empty();
     if (object === null) return;
-    let $icon = object.thumbnailDOM(100, 100, 4, 5, true);
+    let $icon = object.thumbnailDOM(100, 100, 4, 4, false);
     let $card = object.infoDOM($icon);
     this.$info.append($card);
   }
 
   renderPanel(layout, $panel) {
     for (let name of layout) {
-      let item = lookupName(name);
-      let $icon = item.thumbnailDOM(60, 60, 0, 3, true);
-      this.linkIcon($icon, item);
+      let object = lookupName(name);
+      let $icon = object.thumbnailDOM(60, 60, 0, 3, true);
+      this.linkIcon($icon, object);
       $panel.append($icon);
     }
   }
@@ -163,51 +175,51 @@ class ItemRenderer extends ForagerRenderer {
       "#{item/stone}",
       "#{item/iron-ore}",
       "#{item/gold-ore}",
+      "#{item/sand}",
       "#{item/coal}",
+      "#{item/crystal}",
       "#{item/flower}",
-      "#{item/fiber}",
-      "#{item/poop}",
+      "#{item/lavender}",
+      "#{item/nightshade}",
+      "#{item/cinderbloom}",
+      "#{item/hide}",
       "#{item/bone}",
       "#{item/jelly}",
-      "#{item/lavender}",
-      "#{item/crystal}",
-      "#{item/cinderbloom}",
       "#{item/demon-horn}",
-      "#{item/hide}",
-      "#{item/sand}",
     ];
     let gemLayout = [
       "#{item/ruby}",
       "#{item/emerald}",
       "#{item/topaz}",
       "#{item/amethyst}",
+      "#{item/transmutation}",
     ];
     let bottledLayout = [
       "#{item/bottled-torchbug}",
       "#{item/bottled-beetle}",
       "#{item/bottled-butterfly}",
       "#{item/bottled-deathmoth}",
-      "#{item/bottled-oil}",
-      "#{item/bottled-water}",
-      "#{item/bottled-milk}",
       "#{item/bottled-fairy}",
+      "#{item/bottled-oil}",
+      "#{item/bottled-milk}",
       "#{item/bottled-rainbow}",
+      "#{item/bottled-water}",
     ];
     let archLayout = [
       "#{item/fossil}",
       "#{item/sphynx}",
       "#{item/kapala}",
       "#{item/frozen-relic}",
+      "#{item/dino-egg}",
       "#{item/anchor}",
       "#{item/sunken-ankh}",
-      "#{item/dino-egg}",
       "#{item/skeleton-fish}",
       "#{item/frozen-squid}",
       "#{item/lava-eel}",
+      "#{item/golden-egg}",
     ];
     let craftableLayout = [
       "#{item/thread}",
-      "#{item/hide}",
       "#{item/brick}",
       "#{item/iron-ingot}",
       "#{item/gold-ingot}",
@@ -220,15 +232,18 @@ class ItemRenderer extends ForagerRenderer {
       "#{item/royal-clothing}",
       "#{item/fiberglass}",
       "#{item/electronics}",
-      "#{item/transmutation}",
+      // "#{item/transmutation}",
       "#{item/green-pigment}",
       "#{item/purple-pigment}",
       "#{item/arrow}",
-      "#{item/bomb}",
       "#{item/key}",
       "#{item/coin}",
       "#{item/bottle}",
       "#{item/droid}",
+      "#{item/emp-grenade}",
+      "#{item/spirit-orb}",
+      "#{item/great-skull}",
+      "#{item/landfill}",
     ];
 
     this.renderPanel(rawMaterialLayout, $("#raw-material-panel"));
@@ -236,31 +251,31 @@ class ItemRenderer extends ForagerRenderer {
     this.renderPanel(bottledLayout, $("#bottled-panel"));
     this.renderPanel(archLayout, $("#arch-panel"));
     this.renderPanel(craftableLayout, $("#craftable-panel"));
-   
+
     // "#{item/}",
     let farmRawLayout = [
-      "#{item/poop}",
       "#{item/beet}",
       "#{item/wheat}",
       "#{item/hot-pepper}",
       "#{item/pumpkin}",
-      "#{item/berry}",
       "#{item/citrus}",
+      "#{item/fiber}",
+      "#{item/poop}",
+      "#{item/berry}",
+      "#{item/cactus-fruit}",
       "#{item/egg}",
-      "#{item/golden-egg}",
-      "#{item/bottled-milk}",
       "#{item/meat}",
       "#{item/fish}",
       "#{item/seaweed}",
     ];
     let seedLayout = [
-      "#{item/animal-feed}",
       "#{item/beet-seeds}",
       "#{item/wheat-seeds}",
       "#{item/pepper-seeds}",
       "#{item/pumpkin-seeds}",
       "#{item/tree-sapling}",
       "#{item/cotton-seeds}",
+      "#{item/animal-feed}",
     ];
     let cookLayout = [
       "#{item/cooked-fish}",
@@ -329,7 +344,7 @@ class ItemRenderer extends ForagerRenderer {
     this.renderPanel(rodLayout, $("#rod-panel"));
 
     let backpackLayout = [
-      "#{item/basic-backpack}",
+      // "#{item/basic-backpack}",
       "#{item/small-backpack}",
       "#{item/medium-backpack}",
       "#{item/big-backpack}",
@@ -337,7 +352,7 @@ class ItemRenderer extends ForagerRenderer {
       "#{item/tycoon-backpack}",
     ];
     let walletLayout = [
-      "#{item/basic-wallet}",
+      // "#{item/basic-wallet}",
       "#{item/small-wallet}",
       "#{item/medium-wallet}",
       "#{item/big-wallet}",
@@ -371,18 +386,18 @@ class ItemRenderer extends ForagerRenderer {
       "#{item/demon-amulet}",
     ];
     let artifactLayout = [
+      "#{item/fairy-aura}",
+      "#{item/pink-bow}",
+      "#{item/skull-key}",
+      "#{item/magic-scepter}",
+      "#{item/holy-relic}",
       "#{item/nerdy-glasses}",
       "#{item/top-hat}",
-      "#{item/pink-bow}",
       "#{item/lantern}",
-      "#{item/skull-key}",
       "#{item/skeleton-mask}",
-      "#{item/fairy-aura}",
       "#{item/quiver}",
       "#{item/vampyr-wings}",
       "#{item/shield}",
-      "#{item/magic-scepter}",
-      "#{item/holy-relic}",
     ];
     let sealLayout = [
       "#{item/ancient-seal}",
@@ -439,16 +454,16 @@ class StructRenderer extends ForagerRenderer {
   viewObject(object) {
     this.$info.empty();
     if (object === null) return;
-    let $icon = object.thumbnailDOM(200, 200, 4, 4, true);
+    let $icon = object.thumbnailDOM(200, 200, 4, 4, false);
     let $card = object.infoDOM($icon);
     this.$info.append($card);
   }
 
   renderPanel(layout, $panel) {
     for (let name of layout) {
-      let struct = lookupName(name);
-      let $icon = struct.thumbnailDOM(100, 100, 0, 3, true);
-      this.linkIcon($icon, struct);
+      let object = lookupName(name);
+      let $icon = object.thumbnailDOM(100, 100, 0, 2, true);
+      this.linkIcon($icon, object);
       $panel.append($icon);
     }
   }
@@ -494,5 +509,413 @@ class StructRenderer extends ForagerRenderer {
     this.renderPanel(farmingLayout, $("#farming-panel"));
     this.renderPanel(economicLayout, $("#economic-panel"));
     this.renderPanel(magicalLayout, $("#magical-panel"));
+  }
+}
+
+
+
+class LandRenderer extends ForagerRenderer {
+  constructor() {
+    super($("#info"));
+  }
+
+  viewObject(object) {
+    this.$info.empty();
+    if (object === null) return;
+    let $icon = object.thumbnailDOM(270, 270, 4, 0.5, false);
+    let $card = object.infoDOM($icon);
+    this.$info.append($card);
+  }
+
+  renderPanel(layout, $panel) {
+    for (let name of layout) {
+      let object = lookupName(name);
+      let $icon = object.thumbnailDOM(135, 135, 4, 0.25, true);
+      this.linkIcon($icon, object);
+      $panel.append($icon);
+    }
+  }
+
+  render() {
+    let grassLayout = [
+      "#{land/grass-born}",
+      "#{land/grass-beets}",
+      "#{land/grass-fairy-queen}",
+      "#{land/grass-island}",
+      "#{land/grass-museum}",
+      "#{land/grass-pillars}",
+      "#{land/grass-druid}",
+      "#{land/grass-rainbow}",
+      "#{land/grass-obelisk}",
+    ];
+    let ancientLayout = [
+      "#{land/ancient-galaxy}",
+      "#{land/ancient-dungeon}",
+      "#{land/ancient-eye-statue}",
+      "#{land/ancient-monolith}",
+      "#{land/ancient-receptor}",
+      "#{land/ancient-dig}",
+      "#{land/ancient-watchers}",
+      "#{land/ancient-princess}",
+      "#{land/ancient-oldman}",
+      "#{land/ancient-obelisk}",
+    ];
+    let fireLayout = [
+      "#{land/fire-galaxy}",
+      "#{land/fire-dungeon}",
+      "#{land/fire-lightsout}",
+      "#{land/fire-numbers}",
+      "#{land/fire-wizard-tower}",
+      "#{land/fire-factory}",
+      "#{land/fire-chests}",
+      "#{land/fire-shrine}",
+      "#{land/fire-blood-altar}",
+      "#{land/fire-obelisk}",
+    ];
+    let frozenLayout = [
+      "#{land/frozen-galaxy}",
+      "#{land/frozen-dungeon}",
+      "#{land/frozen-sleeping-statue}",
+      "#{land/frozen-ghost}",
+      "#{land/frozen-foxmage}",
+      "#{land/frozen-wizzards-battle}",
+      "#{land/frozen-miner}",
+      "#{land/frozen-chest}",
+      "#{land/frozen-magic-deer}",
+      "#{land/frozen-obelisk}",
+    ];
+    let skullLayout = [
+      "#{land/skull-galaxy}",
+      "#{land/skull-dungeon}",
+      "#{land/skull-braziers}",
+      "#{land/skull-gem-pillars}",
+      "#{land/skull-bells}",
+      "#{land/skull-bone-piles}",
+      "#{land/skull-jester}",
+      "#{land/skull-spike}",
+      "#{land/skull-skeletons}",
+      "#{land/skull-obelisk}",
+    ];
+
+    this.renderPanel(grassLayout, $("#grass-panel"));
+    this.renderPanel(ancientLayout, $("#ancient-panel"));
+    this.renderPanel(skullLayout, $("#skull-panel"));
+    this.renderPanel(frozenLayout, $("#frozen-panel"));
+    this.renderPanel(fireLayout, $("#fire-panel"));
+  }
+}
+
+
+
+
+class ObjRenderer extends ForagerRenderer {
+  constructor() {
+    super($("#info"));
+  }
+
+  viewObject(object) {
+    this.$info.empty();
+    if (object === null) return;
+    let $icon = object.thumbnailDOM(100, 100, 4, 3, false);
+    let $card = object.infoDOM($icon);
+    this.$info.append($card);
+  }
+
+  renderPanel(layout, $panel) {
+    for (let name of layout) {
+      let object = lookupName(name);
+      let $icon = object.thumbnailDOM(60, 60, 4, 2, true);
+      this.linkIcon($icon, object);
+      $panel.append($icon);
+    }
+  }
+
+  render() {
+    let enemyLayout = [
+      "#{obj/slime}",
+      "#{obj/boar}",
+      "#{obj/giant-beet}",
+      "#{obj/skeleton}",
+      "#{obj/big-skeleton}",
+      "#{obj/electric-spike}",
+      "#{obj/watcher}",
+      "#{obj/thunder-spirit}",
+      "#{obj/thunder-spirit-boss}",
+      "#{obj/wizrob}",
+      "#{obj/wizrob-boss}",
+      "#{obj/floating-skull}",
+      "#{obj/demon}",
+      "#{obj/demon-boss}",
+    ];
+
+    let animalLayout = [
+      "#{obj/chicken}",
+      "#{obj/cow}",
+      "#{obj/sheep}",
+      "#{obj/magic-deer}",
+      "#{obj/fairy}",
+      "#{obj/beetle}",
+      "#{obj/butterfly}",
+      "#{obj/deathmoth}",
+      "#{obj/torchbug}",
+    ];
+
+    let plantLayout = [
+      "#{obj/flower}",
+      "#{obj/lavender}",
+      "#{obj/nightshade}",
+      "#{obj/cinderbloom}",
+      "#{obj/bush}",
+      "#{obj/cotton}",
+      "#{obj/beet}",
+      "#{obj/hot-pepper}",
+      "#{obj/pumpkin}",
+      "#{obj/wheat}",
+      "#{obj/cactus}",
+      "#{obj/tree}",
+      "#{obj/tree-ancient}",
+      "#{obj/tree-skull}",
+      "#{obj/tree-frozen}",
+    ];
+
+    let mineralLayout = [
+      "#{obj/dig-spot}",
+      "#{obj/rock}",
+      "#{obj/coal-rock}",
+      "#{obj/iron-rock}",
+      "#{obj/gold-rock}",
+      "#{obj/crystal-blue}",
+      "#{obj/crystal-purple}",
+      "#{obj/big-coal-rock}",
+      "#{obj/big-iron-rock}",
+      "#{obj/big-gold-rock}",
+    ];
+
+    let instrumentLayout = [
+      "#{obj/small-chest}",
+      "#{obj/skull-chest}",
+      "#{obj/blue-chest}",
+      "#{obj/big-chest}",
+      "#{obj/grave}",
+      "#{obj/bone-pile}",
+      "#{obj/electric-cube}",
+      "#{obj/receptor}",
+      "#{obj/volcano-pushdown-pillar}",
+    ];
+
+    this.renderPanel(enemyLayout, $("#enemy-panel"));
+    this.renderPanel(animalLayout, $("#animal-panel"));
+    this.renderPanel(plantLayout, $("#plant-panel"));
+    this.renderPanel(mineralLayout, $("#mineral-panel"));
+    this.renderPanel(instrumentLayout, $("#instrument-panel"));
+  }
+}
+
+
+
+class BuffRenderer extends ForagerRenderer {
+  constructor() {
+    super($("#info"));
+  }
+
+  viewObject(object) {
+    this.$info.empty();
+    if (object === null) return;
+    let $icon = object.thumbnailDOM(100, 100, 4, 3, false);
+    let $card = object.infoDOM($icon);
+    this.$info.append($card);
+  }
+
+  renderPanel(layout, $panel) {
+    for (let name of layout) {
+      let object = lookupName(name);
+      let $icon = object.thumbnailDOM(60, 60, 4, 2, true);
+      this.linkIcon($icon, object);
+      $panel.append($icon);
+    }
+  }
+
+  render() {
+    let obeliskBuffLayout = [
+      "#{buff/foraging}",
+      "#{buff/lumberjacking}",
+      "#{buff/mining}",
+      "#{buff/crafting}",
+      "#{buff/combat}",
+    ];
+    let normalBuffLayout = [
+      "#{buff/thunderbound}",
+      "#{buff/glittery}",
+      "#{buff/lucky}",
+      "#{buff/wise}",
+      "#{buff/enraged}",
+      "#{buff/greedy}",
+      "#{buff/venomous}",
+      "#{buff/dragonheart}",
+    ];
+    let shrineBuffLayout = [
+      "#{buff/hoarder}",
+      "#{buff/industrious}",
+      "#{buff/scholar}",
+      "#{buff/dexterous}",
+      "#{buff/excavator}",
+      "#{buff/builder}",
+      "#{buff/colonist}",
+      "#{buff/merchant}",
+    ];
+    let shrineOptionLayout = [
+      "#{buff/shrine-hoarder}",
+      "#{buff/shrine-industrious}",
+      "#{buff/shrine-scholar}",
+      "#{buff/shrine-dexterous}",
+      "#{buff/shrine-excavator}",
+      "#{buff/shrine-builder}",
+      "#{buff/shrine-colonist}",
+      "#{buff/shrine-merchant}",
+    ];
+    let altarOptionLayout = [
+      "#{buff/gluttony}",
+      "#{buff/avarice}",
+      "#{buff/wrath}",
+      "#{buff/madness}",
+      "#{buff/termination}",
+      "#{buff/doom}",
+      "#{buff/hermetics}",
+      "#{buff/challenge}",
+    ];
+
+    this.renderPanel(obeliskBuffLayout, $("#obelisk-buff-panel"));
+    this.renderPanel(normalBuffLayout, $("#normal-buff-panel"));
+    this.renderPanel(shrineBuffLayout, $("#shrine-buff-panel"));
+    this.renderPanel(shrineOptionLayout, $("#shrine-option-panel"));
+    this.renderPanel(altarOptionLayout, $("#altar-option-panel"));
+  }
+}
+
+
+
+
+
+class FeatRenderer extends ForagerRenderer {
+  constructor() {
+    super($("#info"));
+  }
+
+  viewObject(object) {
+    this.$info.empty();
+    if (object === null) return;
+    let $icon = object.thumbnailDOM(100, 100, 4, 3, false);
+    let $card = object.infoDOM($icon);
+    this.$info.append($card);
+  }
+
+  // reference: https://stackoverflow.com/questions/49141874/bootstrap-4-card-panel-with-image-left-of-header-and-title
+  // reference: https://codepen.io/SteveJRobertson/pen/POdvgz
+  renderPanel(layout, $panel) {
+    for (let name of layout) {
+      let object = lookupName(name);
+      let $icon = object.thumbnailDOM(60, 60, 4, 2, false);
+      let $card = $("<div>", {class: "card"});
+      let $cardWrapper = $("<div>", {class: "card-horizontal"}).appendTo($card);
+      $("<div>", {class: "card-header border-0"}).append($icon).appendTo($cardWrapper);
+      let $cardBody = $("<div>", {class: "card-body px-2"}).appendTo($cardWrapper);
+      $("<h4>", {class: "card-title"}).text(object.name).appendTo($cardBody);
+      // let $desc = $("<ul>", {class: "list-group list-group-flush forager-desc"}).appendTo($cardBlock);
+      object.forEachDesc(function (line) {
+        $("<p>", { class: "card-text" }).html(unfoldMacro(line)).appendTo($cardBody);
+      });
+      $panel.append($card);
+    }
+  }
+
+  render() {
+    let featLayout = [
+      "#{feat/tycoon}",
+      "#{feat/miner}",
+      "#{feat/royal}",
+      "#{feat/gemologist}",
+      "#{feat/tough}",
+      "#{feat/tomb-raider}",
+      "#{feat/pathfinder}",
+      "#{feat/ice-breaker}",
+      "#{feat/demon-hunter}",
+      "#{feat/ancient-astronomer}",
+      "#{feat/skull-astronomer}",
+      "#{feat/frozen-astronomer}",
+      "#{feat/fire-astronomer}",
+      "#{feat/unscarred}",
+      "#{feat/occult}",
+      "#{feat/jester}",
+      "#{feat/sharpshooter}",
+      "#{feat/swordmaster}",
+      "#{feat/winner}",
+      "#{feat/greedy}",
+      "#{feat/monster}",
+      "#{feat/duelist}",
+      "#{feat/rainbuddy}",
+      "#{feat/robotic}",
+      "#{feat/bomberman}",
+      "#{feat/spelunker}",
+      "#{feat/gourmand}",
+      "#{feat/hopeless}",
+      "#{feat/addicted}",
+      "#{feat/mason}",
+      "#{feat/expansionist}",
+      "#{feat/destroyer}",
+      "#{feat/jealous}",
+      "#{feat/disgusting}",
+      "#{feat/angler}",
+      "#{feat/hoarder}",
+      "#{feat/big-hoarder}",
+      "#{feat/irrigator}",
+      "#{feat/harvester}",
+      "#{feat/wealthy}",
+      "#{feat/millonaire}",
+      "#{feat/smelter}",
+      "#{feat/mint}",
+      "#{feat/treasure-hunter}",
+      "#{feat/digger}",
+      "#{feat/artisan}",
+      "#{feat/constructor}",
+      "#{feat/champion}",
+      "#{feat/waterproof}",
+      "#{feat/secret-finder}",
+      "#{feat/enlightened}",
+      "#{feat/marksman}",
+      "#{feat/acrobat}",
+      "#{feat/daredevil}",
+      "#{feat/pillager}",
+      "#{feat/bug-catcher}",
+      "#{feat/extrovert}",
+      "#{feat/diligent}",
+      "#{feat/druid-helper}",
+      "#{feat/princess-helper}",
+      "#{feat/wizard-helper}",
+      "#{feat/goblin-helper}",
+      "#{feat/fairy-helper}",
+      "#{feat/engineer-helper}",
+      "#{feat/ghost-helper}",
+      "#{feat/old-people-helper}",
+      "#{feat/fox-helper}",
+      "#{feat/master-forager}",
+      "#{feat/master-miner}",
+      "#{feat/master-builder}",
+      "#{feat/master-farmer}",
+      "#{feat/master-chef}",
+      "#{feat/master-alchemist}",
+      "#{feat/master-trapper}",
+      "#{feat/master-archaeologist}",
+      "#{feat/curator}",
+      "#{feat/skillful}",
+      "#{feat/imperialist}",
+      "#{feat/treasure-master}",
+      "#{feat/tool-collector}",
+      "#{feat/accessory-collector}",
+      "#{feat/seal-collector}",
+      "#{feat/artifact-collector}",
+      "#{feat/completionist}",
+    ];
+
+    this.renderPanel(featLayout, $("#feat-panel"));
   }
 }

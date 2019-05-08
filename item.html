@@ -22,29 +22,38 @@
       <div class="col-sm-9 offset-sm-3">
         <!--raw-->
         <div class="card">
-          <div class="card-header" id="material-section">原料</div>
+          <div class="card-header" id="material-section">原料与工业品</div>
           <div class="card-body">
             <div class="row" id="raw-material-panel"></div>
             <div class="row" id="craftable-panel"></div>
             <div class="row" id="bottled-panel"></div>
-            <div class="row" id="gem-panel"></div>
             <div class="row" id="arch-panel"></div>
+            <div class="row" id="gem-panel"></div>
           </div>
         </div>
 
-        <!--raw-->
+        <!--farm-->
         <div class="card">
           <div class="card-header" id="farm-section">农业</div>
           <div class="card-body">
-            <div class="row" id="farm-raw-panel"></div>
             <div class="row" id="seed-panel"></div>
+            <div class="row" id="farm-raw-panel"></div>
             <div class="row" id="cook-panel"></div>
+          </div>
+        </div>
+
+        <!--magic-->
+        <div class="card">
+          <div class="card-header" id="magic-section">药剂与卷轴</div>
+          <div class="card-body">
+            <div class="row" id="potion-panel"></div>
+            <div class="row" id="scroll-panel"></div>
           </div>
         </div>
 
         <!--tool-->
         <div class="card">
-          <div class="card-header" id="tool-section">工具</div>
+          <div class="card-header" id="tool-section">工具与武器</div>
           <div class="card-body">
             <div class="row" id="pickaxe-panel"></div>
             <div class="row" id="shovel-panel"></div>
@@ -69,23 +78,13 @@
           </div>
         </div>
 
-        <!--magic-->
-        <div class="card">
-          <div class="card-header" id="magic-section">魔法</div>
-          <div class="card-body">
-            <div class="row" id="potion-panel"></div>
-            <div class="row" id="scroll-panel"></div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 
   <script src="js/util.js"></script>
-  <script src="data/datatypes.js"></script>
-  <script src="data/skill.js"></script>
-  <script src="data/item.js"></script>
-  <script src="data/struct.js"></script>
+  <script src="js/datatypes.js"></script>
+  <script src="js/data.js"></script>
   <script src="js/render.js"></script>
   <script>
     renderNavbar();

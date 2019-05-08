@@ -4,12 +4,15 @@ img {
 
 .icon {
     margin: 0px;
-    cursor: pointer;
 }
 
 .align-center {
     display: flex;
     align-items: center;
+}
+
+.hover-wrapper {
+    cursor: pointer;
 }
 
 /* reference: https://stackoverflow.com/questions/14149360/text-on-image-mouseover */
@@ -24,4 +27,9 @@ img {
 
 .inline-image {
     height: 1em;
+}
+
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
 }

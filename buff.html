@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <title>Buff - 浮岛物语</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/forager.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-sm-3 fixed-top" id="info" style="top:200px">
+      </div>
+      <div class="col-sm-9 offset-sm-3">
+        <br />
+        <div class="row" id="obelisk-buff-panel"></div>
+        <div class="row" id="normal-buff-panel"></div>
+        <div class="row" id="shrine-buff-panel"></div>
+        <div class="row" id="shrine-option-panel"></div>
+        <div class="row" id="altar-option-panel"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/util.js"></script>
+  <script src="js/datatypes.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/render.js"></script>
+  <script>
+    renderNavbar();
+    let renderer = new BuffRenderer();
+    renderer.render();
+    renderer.handleQuery(window.location.search, "buff");
+  </script>
+</body>
+
+</html>

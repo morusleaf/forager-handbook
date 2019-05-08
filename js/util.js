@@ -37,6 +37,10 @@ function getCategoryByName(categoryName) {
     case "skill": return skills; break;
     case "item": return items; break;
     case "struct": return structs; break;
+    case "land": return lands; break;
+    case "obj": return objs; break;
+    case "feat": return feats; break;
+    case "buff": return buffs; break;
     default: throw new ReferenceError(categoryName + " does not match any category");
   }
 }
@@ -109,9 +113,15 @@ function unfoldMacro(st) {
   let tail = st;
   let matches = pattern.exec(tail);
   while (matches !== null) {
-    let res = decodeName(matches[0]);
-    let object = res.object;
-    let href = object.href(res.showIcon, res.aliasText);
+    let href = undefined;
+    try {
+      let res = decodeName(matches[0]);
+      let object = res.object;
+      href = object.href(res.showIcon, res.aliasText);
+    } catch (err) {
+      console.warn(err.toString());
+      href = matches[0];
+    }
     let matchIndex = matches.index;
     // update head, i.e., append everything before matched part + unfolded macro
     head += tail.substring(0, matchIndex) + href;
