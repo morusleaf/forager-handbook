@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <title>LightsOut - 浮岛物语</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/forager.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+
+        <table class="table-borderless" id="matrix">
+          <tbody>
+          </tbody>
+        </table>
+        <p>按下"求解"，部分发光按钮背景会变灰，在游戏中将这些按钮挨个按一次，顺序无所谓，最终所有按钮都会变成灭(按下)的状态。</p>
+        <p>如果你的行数或列数和这里不一样，可以在下面修改后点击重置。</p>
+        <p>你也可以在上面的方阵中点击调整到你需要的状态再求解(每次点击只会修改一个按钮，不会改变相邻按钮的状态)</p>
+        <form>
+          <label>行数</label>
+          <input type="number" id="row">
+          <label>列数</label>
+          <input type="number" id="col">
+          <button type="button" class="btn btn-primary" onclick="resetPuzzle()">重置</button>
+          <button type="button" class="btn btn-primary" onclick="solveAndRender()">求解</button>
+        </form>
+
+        <div class="alert alert-danger d-none" id="alert-message">
+          无法求解
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/render.js"></script>
+  <script src="js/lightsout.js"></script>
+  <script>
+    renderNavbar();
+    var lightsout = new LightsOut(4, 4);
+    if (window.location.search !== "") {
+      let key = window.location.search.substring(1);
+      if (key == "galaxy") {
+        lightsout.setMatrix([
+          0b010011,
+          0b001100,
+          0b011101,
+          0b101111,
+          0b011000,
+          0b000100,
+        ], 6);
+      }
+    }
+    $("#row").val(lightsout.H);
+    $("#col").val(lightsout.W);
+    render(lightsout);
+  </script>
+</body>
+
+</html>

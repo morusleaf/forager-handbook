@@ -47,7 +47,7 @@ class ForagerRenderer {
   deselect() {
     if (this.selectedObject === null) return;
     let $dom = this.selectedObject.referThumbnailDOM();
-    $dom.css("background-color", "white");
+    $dom.css("background-color", "transparent");
     this.selectedObject = null;
   }
 

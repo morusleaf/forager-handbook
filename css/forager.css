@@ -15,6 +15,10 @@ img {
     cursor: pointer;
 }
 
+.pushdown-button {
+    cursor: pointer;
+}
+
 /* reference: https://stackoverflow.com/questions/14149360/text-on-image-mouseover */
 .hover-wrapper:hover {
     transform: scale(1.1)

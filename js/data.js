@@ -3184,7 +3184,7 @@ var lands_rawdata = {
     desc: [
       "按下一个#{obj/volcano-pushdown-pillar}会翻转周围4个的状态(灭变亮，亮变灭)",
       "你的目标是使所有#{obj/volcano-pushdown-pillar}都熄灭",
-      '这其实是一个经典的智力游戏<a href="https://en.wikipedia.org/wiki/Lights_Out_(game)">Lightsout</a>，我写了一个网页<a href="lightsout.html">工具</a>帮你快速解谜',
+      '这其实是一个经典的智力游戏<a href="https://en.wikipedia.org/wiki/Lights_Out_(game)">Lightsout</a>，我写了一个网页<a href="lightsout.html?galaxy">工具</a>帮你快速解谜',
       "奖励#{item/fire-galaxy-seal} #{obj/small-chest}(4)"
     ],
   },
