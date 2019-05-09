@@ -34,6 +34,9 @@ function renderNavbar() {
   // feat
   let $feat = $("<li>", { class: "nav-item" }).appendTo($ul);
   $("<a>", { class: "nav-link", href: "feat.html" }).text("成就").appendTo($feat);
+  // util
+  let $util = $("<li>", { class: "nav-item" }).appendTo($ul);
+  $("<a>", { class: "nav-link", href: "util.html" }).text("辅助").appendTo($util);
 
   $(document.body).prepend($nav);
 }
@@ -917,5 +920,44 @@ class FeatRenderer extends ForagerRenderer {
     ];
 
     this.renderPanel(featLayout, $("#feat-panel"));
+  }
+}
+
+
+
+
+function renderDroids() {
+  let width = 100;
+  let height = 80;
+  let $panel = $("#droid-panel");
+  let scale = 2;
+  let index = 1;
+  for (let droidName of droidsNameList) {
+    let $pane = $("<div>", {
+      id: droidName,
+      style: "display: inline-block"
+    }).appendTo($panel);
+    let $frame = $("<div>", {
+      class: `align-center`,
+      style: `width:${width}px; height:${height}px`
+    }).appendTo($pane);
+    $("<p>", {
+      class: "text-center",
+    }).html(`${index}: <b>${droidName}</b>`).appendTo($pane);
+    let $img = $("<img>", {
+      class: "img-fluid mx-auto",
+      src: `img/droid/${droidName}.png`,
+      alt: droidName,
+      style: "visibility: hidden"
+    }).appendTo($frame);
+    $img.on("load", function() {
+      let w = $img[0].naturalWidth;
+      let h = $img[0].naturalHeight;
+      scale = Math.min(scale, width/w, height/h);
+      $img.width(w*scale);
+      $img.height(h*scale);
+      $img.css("visibility", "visible");
+    });
+    index++;
   }
 }

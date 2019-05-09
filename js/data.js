@@ -604,8 +604,8 @@ var items_rawdata = {
     opt_ingrd: [
       [
         "#{struct/flower-press}",
-        {name: "#{item/flower}", qty: 2},
-        {name: "#{item/fiber}", qty: 2},
+        { name: "#{item/flower}", qty: 2 },
+        { name: "#{item/fiber}", qty: 2 },
       ],
     ],
     source: [
@@ -621,8 +621,8 @@ var items_rawdata = {
     opt_ingrd: [
       [
         "#{struct/flower-press}",
-        {name: "#{item/flower}", qty: 2},
-        {name: "#{item/wheat}", qty: 2},
+        { name: "#{item/flower}", qty: 2 },
+        { name: "#{item/wheat}", qty: 2 },
       ],
     ],
     source: [
@@ -738,8 +738,8 @@ var items_rawdata = {
     opt_ingrd: [
       [
         "#{struct/flower-press}",
-        {name: "#{item/flower}", qty: 2},
-        {name: "#{item/sand}", qty: 2},
+        { name: "#{item/flower}", qty: 2 },
+        { name: "#{item/sand}", qty: 2 },
       ],
     ],
     source: [
@@ -794,8 +794,8 @@ var items_rawdata = {
     opt_ingrd: [
       [
         "#{struct/flower-press}",
-        {name: "#{item/flower}", qty: 2},
-        {name: "#{item/stone}", qty: 2},
+        { name: "#{item/flower}", qty: 2 },
+        { name: "#{item/stone}", qty: 2 },
       ],
     ],
     source: [
@@ -811,13 +811,13 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/furnace}",
-      {name: "#{item/wood}", qty: 2},
+      { name: "#{item/wood}", qty: 2 },
     ],
     opt_ingrd: [
       [
         "#{struct/flower-press}",
-        {name: "#{item/flower}", qty: 2},
-        {name: "#{item/nightshade}", qty: 2},
+        { name: "#{item/flower}", qty: 2 },
+        { name: "#{item/nightshade}", qty: 2 },
       ],
     ],
     source: [
@@ -831,8 +831,8 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/furnace}",
-      {name: "#{item/stone}", qty: 2},
-      {name: "#{item/coal}", qty: 1},
+      { name: "#{item/stone}", qty: 2 },
+      { name: "#{item/coal}", qty: 1 },
     ],
   },
   "iron-ingot": {
@@ -842,8 +842,8 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/furnace}",
-      {name: "#{item/iron-ore}", qty: 2},
-      {name: "#{item/coal}", qty: 1},
+      { name: "#{item/iron-ore}", qty: 2 },
+      { name: "#{item/coal}", qty: 1 },
     ],
   },
   "gold-ingot": {
@@ -853,8 +853,8 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/furnace}",
-      {name: "#{item/gold-ore}", qty: 2},
-      {name: "#{item/coal}", qty: 1},
+      { name: "#{item/gold-ore}", qty: 2 },
+      { name: "#{item/coal}", qty: 1 },
     ],
   },
   "steel": {
@@ -864,15 +864,15 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/furnace}",
-      {name: "#{item/iron-ingot}", qty: 4},
-      {name: "#{item/gold-ingot}", qty: 4},
-      {name: "#{item/coal}", qty: 4},
+      { name: "#{item/iron-ingot}", qty: 4 },
+      { name: "#{item/gold-ingot}", qty: 4 },
+      { name: "#{item/coal}", qty: 4 },
     ],
     opt_ingrd: [
       [
         "#{struct/flower-press}",
-        {name: "#{item/nightshade}", qty: 5},
-        {name: "#{item/cinderbloom}", qty: 3},
+        { name: "#{item/nightshade}", qty: 5 },
+        { name: "#{item/cinderbloom}", qty: 3 },
       ],
     ],
   },
@@ -883,8 +883,8 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/furnace}",
-      {name: "#{item/sand}", qty: 4},
-      {name: "#{item/coal}", qty: 4},
+      { name: "#{item/sand}", qty: 4 },
+      { name: "#{item/coal}", qty: 4 },
     ],
   },
   "royal-steel": {
@@ -894,12 +894,12 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/furnace}",
-      {name: "#{item/steel}", qty: 2},
-      {name: "#{item/ruby}", qty: 1},
-      {name: "#{item/emerald}", qty: 1},
-      {name: "#{item/topaz}", qty: 1},
-      {name: "#{item/amethyst}", qty: 1},
-      {name: "#{item/coal}", qty: 8},
+      { name: "#{item/steel}", qty: 2 },
+      { name: "#{item/ruby}", qty: 1 },
+      { name: "#{item/emerald}", qty: 1 },
+      { name: "#{item/topaz}", qty: 1 },
+      { name: "#{item/amethyst}", qty: 1 },
+      { name: "#{item/coal}", qty: 8 },
     ],
   },
   "cooked-fish": {
@@ -910,8 +910,8 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/furnace}",
-      {name: "#{item/fish}", qty: 1},
-      {name: "#{item/coal}", qty: 1},
+      { name: "#{item/fish}", qty: 1 },
+      { name: "#{item/coal}", qty: 1 },
     ],
   },
   "cooked-meat": {
@@ -923,8 +923,8 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/furnace}",
-      {name: "#{item/meat}", qty: 1},
-      {name: "#{item/coal}", qty: 1},
+      { name: "#{item/meat}", qty: 1 },
+      { name: "#{item/coal}", qty: 1 },
     ],
   },
   "bread": {
@@ -935,8 +935,8 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/furnace}",
-      {name: "#{item/flour}", qty: 1},
-      {name: "#{item/coal}", qty: 1},
+      { name: "#{item/flour}", qty: 1 },
+      { name: "#{item/coal}", qty: 1 },
     ],
   },
   "coin": {
@@ -947,7 +947,7 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/gold-ingot}", qty: 1},
+      { name: "#{item/gold-ingot}", qty: 1 },
     ],
   },
   "key": {
@@ -957,8 +957,8 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/iron-ingot}", qty: 4},
-      {name: "#{item/gold-ingot}", qty: 2},
+      { name: "#{item/iron-ingot}", qty: 4 },
+      { name: "#{item/gold-ingot}", qty: 2 },
     ],
   },
   "arrow": {
@@ -968,8 +968,8 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/wood}", qty: 1},
-      {name: "#{item/stone}", qty: 1},
+      { name: "#{item/wood}", qty: 1 },
+      { name: "#{item/stone}", qty: 1 },
     ],
   },
   "bottle": {
@@ -979,8 +979,8 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/glass}", qty: 2},
-      {name: "#{item/thread}", qty: 1},
+      { name: "#{item/glass}", qty: 2 },
+      { name: "#{item/thread}", qty: 1 },
     ],
   },
   "thread": {
@@ -990,7 +990,7 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/sewing-station}",
-      {name: "#{item/fiber}", qty: 2},
+      { name: "#{item/fiber}", qty: 2 },
     ],
   },
   "leather": {
@@ -1000,8 +1000,8 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/sewing-station}",
-      {name: "#{item/hide}", qty: 2},
-      {name: "#{item/thread}", qty: 2},
+      { name: "#{item/hide}", qty: 2 },
+      { name: "#{item/thread}", qty: 2 },
     ],
   },
   "royal-clothing": {
@@ -1011,12 +1011,12 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/sewing-station}",
-      {name: "#{item/leather}", qty: 4},
-      {name: "#{item/ruby}", qty: 1},
-      {name: "#{item/emerald}", qty: 1},
-      {name: "#{item/topaz}", qty: 1},
-      {name: "#{item/amethyst}", qty: 1},
-      {name: "#{item/thread}", qty: 4},
+      { name: "#{item/leather}", qty: 4 },
+      { name: "#{item/ruby}", qty: 1 },
+      { name: "#{item/emerald}", qty: 1 },
+      { name: "#{item/topaz}", qty: 1 },
+      { name: "#{item/amethyst}", qty: 1 },
+      { name: "#{item/thread}", qty: 4 },
     ],
   },
   "paper": {
@@ -1026,8 +1026,8 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/inscription-table}",
-      {name: "#{item/wood}", qty: 5},
-      {name: "#{item/flower}", qty: 5},
+      { name: "#{item/wood}", qty: 5 },
+      { name: "#{item/flower}", qty: 5 },
     ],
   },
   // "steel": {
@@ -1075,7 +1075,7 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/offshore-drill}",
-      {name: "#{item/bottle}", qty: 1},
+      { name: "#{item/bottle}", qty: 1 },
     ],
   },
   "wheat": {
@@ -1095,9 +1095,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/windmill}",
-      {name: "#{item/flower}", qty: 2},
-      {name: "#{item/jelly}", qty: 2},
-      {name: "#{item/poop}", qty: 2},
+      { name: "#{item/flower}", qty: 2 },
+      { name: "#{item/jelly}", qty: 2 },
+      { name: "#{item/poop}", qty: 2 },
     ],
   },
   "flour": {
@@ -1107,7 +1107,7 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/windmill}",
-      {name: "#{item/wheat}", qty: 2},
+      { name: "#{item/wheat}", qty: 2 },
     ],
   },
   "beet-seeds": {
@@ -1118,7 +1118,7 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/windmill}",
-      {name: "#{item/beet}", qty: 3},
+      { name: "#{item/beet}", qty: 3 },
     ],
   },
   "cotton-seeds": {
@@ -1129,7 +1129,7 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/windmill}",
-      {name: "#{item/fiber}", qty: 3},
+      { name: "#{item/fiber}", qty: 3 },
     ],
   },
   "pepper-seeds": {
@@ -1140,7 +1140,7 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/windmill}",
-      {name: "#{item/hot-pepper}", qty: 3},
+      { name: "#{item/hot-pepper}", qty: 3 },
     ],
   },
   "pumpkin-seeds": {
@@ -1151,7 +1151,7 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/windmill}",
-      {name: "#{item/pumpkin}", qty: 3},
+      { name: "#{item/pumpkin}", qty: 3 },
     ],
   },
   "wheat-seeds": {
@@ -1162,7 +1162,7 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/windmill}",
-      {name: "#{item/wheat}", qty: 3},
+      { name: "#{item/wheat}", qty: 3 },
     ],
   },
   "tree-sapling": {
@@ -1173,7 +1173,7 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/windmill}",
-      {name: "#{item/citrus}", qty: 3},
+      { name: "#{item/citrus}", qty: 3 },
     ],
   },
   "plastic": {
@@ -1183,8 +1183,8 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/factory}",
-      {name: "#{item/bottled-oil}", qty: 2},
-      {name: "#{item/coal}", qty: 20},
+      { name: "#{item/bottled-oil}", qty: 2 },
+      { name: "#{item/coal}", qty: 20 },
     ],
   },
   "fiberglass": {
@@ -1194,9 +1194,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/factory}",
-      {name: "#{item/glass}", qty: 5},
-      {name: "#{item/plastic}", qty: 5},
-      {name: "#{item/royal-clothing}", qty: 5},
+      { name: "#{item/glass}", qty: 5 },
+      { name: "#{item/plastic}", qty: 5 },
+      { name: "#{item/royal-clothing}", qty: 5 },
     ],
   },
   "electronics": {
@@ -1206,9 +1206,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/factory}",
-      {name: "#{item/crystal}", qty: 10},
-      {name: "#{item/plastic}", qty: 10},
-      {name: "#{item/royal-steel}", qty: 5},
+      { name: "#{item/crystal}", qty: 10 },
+      { name: "#{item/plastic}", qty: 10 },
+      { name: "#{item/royal-steel}", qty: 5 },
     ],
   },
   "transmutation": {
@@ -1218,8 +1218,8 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/cauldron}",
-      {name: "#{item/steel}", qty: 1},
-      {name: "#{item/coal}", qty: 15},
+      { name: "#{item/steel}", qty: 1 },
+      { name: "#{item/coal}", qty: 15 },
     ],
   },
   "green-pigment": {
@@ -1229,9 +1229,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/cauldron}",
-      {name: "#{item/cactus-fruit}", qty: 10},
-      {name: "#{item/seaweed}", qty: 10},
-      {name: "#{item/jelly}", qty: 10},
+      { name: "#{item/cactus-fruit}", qty: 10 },
+      { name: "#{item/seaweed}", qty: 10 },
+      { name: "#{item/jelly}", qty: 10 },
     ],
   },
   "purple-pigment": {
@@ -1241,9 +1241,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/cauldron}",
-      {name: "#{item/beet}", qty: 10},
-      {name: "#{item/nightshade}", qty: 10},
-      {name: "#{item/lavender}", qty: 10},
+      { name: "#{item/beet}", qty: 10 },
+      { name: "#{item/nightshade}", qty: 10 },
+      { name: "#{item/lavender}", qty: 10 },
     ],
   },
   "fossil": {
@@ -1344,7 +1344,7 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/windmill}",
-      {name: "#{item/beet}", qty: 2},
+      { name: "#{item/beet}", qty: 2 },
     ],
   },
   "cheese": {
@@ -1355,7 +1355,7 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/windmill}",
-      {name: "#{item/bottled-milk}", qty: 1},
+      { name: "#{item/bottled-milk}", qty: 1 },
     ],
   },
   "mayo": {
@@ -1366,7 +1366,7 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/windmill}",
-      {name: "#{item/egg}", qty: 2},
+      { name: "#{item/egg}", qty: 2 },
     ],
   },
   "egg": {
@@ -1466,8 +1466,8 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/cookpot}",
-      {name: "#{item/bread}", qty: 1},
-      {name: "#{item/cheese}", qty: 1},
+      { name: "#{item/bread}", qty: 1 },
+      { name: "#{item/cheese}", qty: 1 },
     ],
   },
   "cookies": {
@@ -1478,8 +1478,8 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/cookpot}",
-      {name: "#{item/flour}", qty: 1},
-      {name: "#{item/sugar}", qty: 1},
+      { name: "#{item/flour}", qty: 1 },
+      { name: "#{item/sugar}", qty: 1 },
     ],
   },
   "sushi": {
@@ -1490,8 +1490,8 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/cookpot}",
-      {name: "#{item/fish}", qty: 1},
-      {name: "#{item/seaweed}", qty: 1},
+      { name: "#{item/fish}", qty: 1 },
+      { name: "#{item/seaweed}", qty: 1 },
     ],
   },
   "soup": {
@@ -1502,9 +1502,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/cookpot}",
-      {name: "#{item/bottled-milk}", qty: 1},
-      {name: "#{item/beet}", qty: 1},
-      {name: "#{item/pumpkin}", qty: 1},
+      { name: "#{item/bottled-milk}", qty: 1 },
+      { name: "#{item/beet}", qty: 1 },
+      { name: "#{item/pumpkin}", qty: 1 },
     ],
   },
   "sandwich": {
@@ -1515,10 +1515,10 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/cookpot}",
-      {name: "#{item/bread}", qty: 1},
-      {name: "#{item/cheese}", qty: 1},
-      {name: "#{item/mayo}", qty: 1},
-      {name: "#{item/egg}", qty: 2},
+      { name: "#{item/bread}", qty: 1 },
+      { name: "#{item/cheese}", qty: 1 },
+      { name: "#{item/mayo}", qty: 1 },
+      { name: "#{item/egg}", qty: 2 },
     ],
   },
   "fruit-salad": {
@@ -1529,9 +1529,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/cookpot}",
-      {name: "#{item/berry}", qty: 1},
-      {name: "#{item/citrus}", qty: 1},
-      {name: "#{item/cactus-fruit}", qty: 1},
+      { name: "#{item/berry}", qty: 1 },
+      { name: "#{item/citrus}", qty: 1 },
+      { name: "#{item/cactus-fruit}", qty: 1 },
     ],
   },
   "ice-cream": {
@@ -1542,8 +1542,8 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/cookpot}",
-      {name: "#{item/bottled-milk}", qty: 1},
-      {name: "#{item/sugar}", qty: 1},
+      { name: "#{item/bottled-milk}", qty: 1 },
+      { name: "#{item/sugar}", qty: 1 },
     ],
   },
   "meat-skewer": {
@@ -1554,8 +1554,8 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/cookpot}",
-      {name: "#{item/cooked-meat}", qty: 1},
-      {name: "#{item/hot-pepper}", qty: 1},
+      { name: "#{item/cooked-meat}", qty: 1 },
+      { name: "#{item/hot-pepper}", qty: 1 },
     ],
   },
   "dino-egg": {
@@ -1597,9 +1597,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/cauldron}",
-      {name: "#{item/jelly}", qty: 2},
-      {name: "#{item/iron-ingot}", qty: 4},
-      {name: "#{item/coal}", qty: 2},
+      { name: "#{item/jelly}", qty: 2 },
+      { name: "#{item/iron-ingot}", qty: 4 },
+      { name: "#{item/coal}", qty: 2 },
     ],
   },
   "emp-grenade": {
@@ -1610,8 +1610,8 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/factory}",
-      {name: "#{item/bomb}", qty: 1},
-      {name: "#{item/electronics}", qty: 1},
+      { name: "#{item/bomb}", qty: 1 },
+      { name: "#{item/electronics}", qty: 1 },
     ],
   },
   "healing-potion": {
@@ -1622,10 +1622,10 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/cauldron}",
-      {name: "#{item/flower}", qty: 10},
-      {name: "#{item/citrus}", qty: 10},
-      {name: "#{item/wheat}", qty: 10},
-      {name: "#{item/bottled-torchbug}", qty: 5},
+      { name: "#{item/flower}", qty: 10 },
+      { name: "#{item/citrus}", qty: 10 },
+      { name: "#{item/wheat}", qty: 10 },
+      { name: "#{item/bottled-torchbug}", qty: 5 },
     ],
   },
   "thunderstrike": {
@@ -1636,10 +1636,10 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/cauldron}",
-      {name: "#{item/topaz}", qty: 1},
-      {name: "#{item/crystal}", qty: 5},
-      {name: "#{item/pumpkin}", qty: 5},
-      {name: "#{item/bottled-torchbug}", qty: 5},
+      { name: "#{item/topaz}", qty: 1 },
+      { name: "#{item/crystal}", qty: 5 },
+      { name: "#{item/pumpkin}", qty: 5 },
+      { name: "#{item/bottled-torchbug}", qty: 5 },
     ],
   },
   "anas-delight": {
@@ -1650,10 +1650,10 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/cauldron}",
-      {name: "#{item/emerald}", qty: 1},
-      {name: "#{item/sugar}", qty: 5},
-      {name: "#{item/flower}", qty: 5},
-      {name: "#{item/bottled-butterfly}", qty: 5},
+      { name: "#{item/emerald}", qty: 1 },
+      { name: "#{item/sugar}", qty: 5 },
+      { name: "#{item/flower}", qty: 5 },
+      { name: "#{item/bottled-butterfly}", qty: 5 },
     ],
   },
   "liquid-luck": {
@@ -1664,10 +1664,10 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/cauldron}",
-      {name: "#{item/amethyst}", qty: 1},
-      {name: "#{item/nightshade}", qty: 5},
-      {name: "#{item/bone}", qty: 5},
-      {name: "#{item/bottled-beetle}", qty: 5},
+      { name: "#{item/amethyst}", qty: 1 },
+      { name: "#{item/nightshade}", qty: 5 },
+      { name: "#{item/bone}", qty: 5 },
+      { name: "#{item/bottled-beetle}", qty: 5 },
     ],
   },
   "wisdom-draught": {
@@ -1678,10 +1678,10 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/cauldron}",
-      {name: "#{item/amethyst}", qty: 1},
-      {name: "#{item/paper}", qty: 5},
-      {name: "#{item/beet}", qty: 5},
-      {name: "#{item/bottled-beetle}", qty: 5},
+      { name: "#{item/amethyst}", qty: 1 },
+      { name: "#{item/paper}", qty: 5 },
+      { name: "#{item/beet}", qty: 5 },
+      { name: "#{item/bottled-beetle}", qty: 5 },
     ],
   },
   "mandragora": {
@@ -1692,10 +1692,10 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/cauldron}",
-      {name: "#{item/emerald}", qty: 1},
-      {name: "#{item/lavender}", qty: 5},
-      {name: "#{item/cactus-fruit}", qty: 5},
-      {name: "#{item/bottled-butterfly}", qty: 5},
+      { name: "#{item/emerald}", qty: 1 },
+      { name: "#{item/lavender}", qty: 5 },
+      { name: "#{item/cactus-fruit}", qty: 5 },
+      { name: "#{item/bottled-butterfly}", qty: 5 },
     ],
   },
   "bloodfury-cocktail": {
@@ -1706,10 +1706,10 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/cauldron}",
-      {name: "#{item/ruby}", qty: 1},
-      {name: "#{item/bomb}", qty: 1},
-      {name: "#{item/hot-pepper}", qty: 5},
-      {name: "#{item/bottled-deathmoth}", qty: 5},
+      { name: "#{item/ruby}", qty: 1 },
+      { name: "#{item/bomb}", qty: 1 },
+      { name: "#{item/hot-pepper}", qty: 5 },
+      { name: "#{item/bottled-deathmoth}", qty: 5 },
     ],
   },
   "dragon-philtre": {
@@ -1720,10 +1720,10 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/cauldron}",
-      {name: "#{item/ruby}", qty: 1},
-      {name: "#{item/cinderbloom}", qty: 5},
-      {name: "#{item/steel}", qty: 2},
-      {name: "#{item/bottled-deathmoth}", qty: 5},
+      { name: "#{item/ruby}", qty: 1 },
+      { name: "#{item/cinderbloom}", qty: 5 },
+      { name: "#{item/steel}", qty: 2 },
+      { name: "#{item/bottled-deathmoth}", qty: 5 },
     ],
   },
   "greedy-mixture": {
@@ -1734,10 +1734,10 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/cauldron}",
-      {name: "#{item/topaz}", qty: 1},
-      {name: "#{item/nightshade}", qty: 5},
-      {name: "#{item/leather}", qty: 2},
-      {name: "#{item/bottled-torchbug}", qty: 5},
+      { name: "#{item/topaz}", qty: 1 },
+      { name: "#{item/nightshade}", qty: 5 },
+      { name: "#{item/leather}", qty: 2 },
+      { name: "#{item/bottled-torchbug}", qty: 5 },
     ],
   },
   "sage-scroll": {
@@ -1748,9 +1748,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/inscription-table}",
-      {name: "#{item/green-pigment}", qty: 5},
-      {name: "#{item/paper}", qty: 5},
-      {name: "#{item/bottled-fairy}", qty: 1},
+      { name: "#{item/green-pigment}", qty: 5 },
+      { name: "#{item/paper}", qty: 5 },
+      { name: "#{item/bottled-fairy}", qty: 1 },
     ],
   },
   "builder-scroll": {
@@ -1761,9 +1761,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/inscription-table}",
-      {name: "#{item/green-pigment}", qty: 5},
-      {name: "#{item/paper}", qty: 5},
-      {name: "#{item/bottled-torchbug}", qty: 2},
+      { name: "#{item/green-pigment}", qty: 5 },
+      { name: "#{item/paper}", qty: 5 },
+      { name: "#{item/bottled-torchbug}", qty: 2 },
     ],
   },
   "druid-scroll": {
@@ -1774,9 +1774,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/inscription-table}",
-      {name: "#{item/green-pigment}", qty: 5},
-      {name: "#{item/paper}", qty: 5},
-      {name: "#{item/cinderbloom}", qty: 5},
+      { name: "#{item/green-pigment}", qty: 5 },
+      { name: "#{item/paper}", qty: 5 },
+      { name: "#{item/cinderbloom}", qty: 5 },
     ],
   },
   "wizard-scroll": {
@@ -1787,9 +1787,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/inscription-table}",
-      {name: "#{item/purple-pigment}", qty: 5},
-      {name: "#{item/paper}", qty: 5},
-      {name: "#{item/bottled-deathmoth}", qty: 5},
+      { name: "#{item/purple-pigment}", qty: 5 },
+      { name: "#{item/paper}", qty: 5 },
+      { name: "#{item/bottled-deathmoth}", qty: 5 },
     ],
   },
   "miner-scroll": {
@@ -1800,9 +1800,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/inscription-table}",
-      {name: "#{item/purple-pigment}", qty: 5},
-      {name: "#{item/paper}", qty: 5},
-      {name: "#{item/steel}", qty: 3},
+      { name: "#{item/purple-pigment}", qty: 5 },
+      { name: "#{item/paper}", qty: 5 },
+      { name: "#{item/steel}", qty: 3 },
     ],
   },
   "demon-scroll": {
@@ -1813,9 +1813,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/inscription-table}",
-      {name: "#{item/purple-pigment}", qty: 5},
-      {name: "#{item/paper}", qty: 5},
-      {name: "#{item/demon-horn}", qty: 10},
+      { name: "#{item/purple-pigment}", qty: 5 },
+      { name: "#{item/paper}", qty: 5 },
+      { name: "#{item/demon-horn}", qty: 10 },
     ],
   },
   "bottled-rainbow": {
@@ -1834,12 +1834,13 @@ var items_rawdata = {
       "会自动攻击资源、攻击敌人、收集#{struct/fish-trap}、收集动物资源(如从#{obj/sheep}身上取#{item/fiber})、拾起资源，但不会攻击中立动物",
       "可对建筑右键将机器人停在上面提高生产效率50%，但不可和#{struct/power-plant}同时生效",
       "制造的越多每次消耗的材料就越多",
+      "我用解包出的图片做了这个<a href='droid.html'>机器人图鉴</a>，希望帮到收藏癖玩家",
     ],
     ingrd: [
       "#{struct/factory}",
-      {name: "#{item/plastic}", qty: 3},
-      {name: "#{item/fiberglass}", qty: 3},
-      {name: "#{item/electronics}", qty: 3},
+      { name: "#{item/plastic}", qty: 3 },
+      { name: "#{item/fiberglass}", qty: 3 },
+      { name: "#{item/electronics}", qty: 3 },
     ],
   },
   "landfill": {
@@ -1850,8 +1851,8 @@ var items_rawdata = {
     opt_ingrd: [
       [
         "#{struct/flower-press}",
-        {name: "#{item/sand}", qty: 2},
-        {name: "#{item/poop}", qty: 2},
+        { name: "#{item/sand}", qty: 2 },
+        { name: "#{item/poop}", qty: 2 },
       ],
     ],
   },
@@ -1865,7 +1866,7 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/spirit-crystal}",
-      {name: "#{item/bone}", qty: 25},
+      { name: "#{item/bone}", qty: 25 },
     ],
   },
   "spirit-orb": {
@@ -1877,9 +1878,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/spirit-crystal}",
-      {name: "#{item/great-skull}", qty: 10},
-      {name: "#{item/purple-pigment}", qty: 10},
-      {name: "#{item/bottled-fairy}", qty: 5},
+      { name: "#{item/great-skull}", qty: 10 },
+      { name: "#{item/purple-pigment}", qty: 10 },
+      { name: "#{item/bottled-fairy}", qty: 5 },
     ],
     source: [
       "#{obj/big-chest}"
@@ -1899,9 +1900,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/iron-ingot}", qty: 8},
-      {name: "#{item/wood}", qty: 8},
-      {name: "#{item/jelly}", qty: 4},
+      { name: "#{item/iron-ingot}", qty: 8 },
+      { name: "#{item/wood}", qty: 8 },
+      { name: "#{item/jelly}", qty: 4 },
     ],
   },
   "bone-pickaxe": {
@@ -1912,9 +1913,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/iron-ingot}", qty: 16},
-      {name: "#{item/brick}", qty: 8},
-      {name: "#{item/bone}", qty: 4},
+      { name: "#{item/iron-ingot}", qty: 16 },
+      { name: "#{item/brick}", qty: 8 },
+      { name: "#{item/bone}", qty: 4 },
     ],
   },
   "fiery-pickaxe": {
@@ -1925,9 +1926,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/steel}", qty: 12},
-      {name: "#{item/glass}", qty: 12},
-      {name: "#{item/hot-pepper}", qty: 8},
+      { name: "#{item/steel}", qty: 12 },
+      { name: "#{item/glass}", qty: 12 },
+      { name: "#{item/hot-pepper}", qty: 8 },
     ],
   },
   "crystal-pickaxe": {
@@ -1938,9 +1939,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/royal-steel}", qty: 3},
-      {name: "#{item/plastic}", qty: 5},
-      {name: "#{item/crystal}", qty: 10},
+      { name: "#{item/royal-steel}", qty: 3 },
+      { name: "#{item/plastic}", qty: 5 },
+      { name: "#{item/crystal}", qty: 10 },
     ],
   },
   "demon-pickaxe": {
@@ -1951,9 +1952,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/electronics}", qty: 3},
-      {name: "#{item/plastic}", qty: 5},
-      {name: "#{item/demon-horn}", qty: 50},
+      { name: "#{item/electronics}", qty: 3 },
+      { name: "#{item/plastic}", qty: 5 },
+      { name: "#{item/demon-horn}", qty: 50 },
     ],
   },
   "shovel": {
@@ -1964,8 +1965,8 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/iron-ingot}", qty: 4},
-      {name: "#{item/wood}", qty: 4},
+      { name: "#{item/iron-ingot}", qty: 4 },
+      { name: "#{item/wood}", qty: 4 },
     ],
   },
   "bone-sword": {
@@ -1975,8 +1976,8 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/iron-ingot}", qty: 8},
-      {name: "#{item/bone}", qty: 2},
+      { name: "#{item/iron-ingot}", qty: 8 },
+      { name: "#{item/bone}", qty: 2 },
     ],
   },
   "golden-sword": {
@@ -1987,10 +1988,10 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/steel}", qty: 40},
-      {name: "#{item/thread}", qty: 10},
-      {name: "#{item/gold-ingot}", qty: 10},
-      {name: "#{item/topaz}", qty: 2},
+      { name: "#{item/steel}", qty: 40 },
+      { name: "#{item/thread}", qty: 10 },
+      { name: "#{item/gold-ingot}", qty: 10 },
+      { name: "#{item/topaz}", qty: 2 },
     ],
   },
   "druid-sword": {
@@ -2001,11 +2002,11 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/royal-steel}", qty: 2},
-      {name: "#{item/leather}", qty: 5},
-      {name: "#{item/flower}", qty: 50},
-      {name: "#{item/nightshade}", qty: 20},
-      {name: "#{item/lavender}", qty: 20},
+      { name: "#{item/royal-steel}", qty: 2 },
+      { name: "#{item/leather}", qty: 5 },
+      { name: "#{item/flower}", qty: 50 },
+      { name: "#{item/nightshade}", qty: 20 },
+      { name: "#{item/lavender}", qty: 20 },
     ],
   },
   "crystal-sword": {
@@ -2016,10 +2017,10 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/royal-steel}", qty: 5},
-      {name: "#{item/royal-clothing}", qty: 5},
-      {name: "#{item/crystal}", qty: 50},
-      {name: "#{item/amethyst}", qty: 5},
+      { name: "#{item/royal-steel}", qty: 5 },
+      { name: "#{item/royal-clothing}", qty: 5 },
+      { name: "#{item/crystal}", qty: 50 },
+      { name: "#{item/amethyst}", qty: 5 },
     ],
   },
   "demon-sword": {
@@ -2030,10 +2031,10 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/electronics}", qty: 10},
-      {name: "#{item/fiberglass}", qty: 10},
-      {name: "#{item/demon-horn}", qty: 100},
-      {name: "#{item/ruby}", qty: 10},
+      { name: "#{item/electronics}", qty: 10 },
+      { name: "#{item/fiberglass}", qty: 10 },
+      { name: "#{item/demon-horn}", qty: 100 },
+      { name: "#{item/ruby}", qty: 10 },
     ],
   },
   "short-bow": {
@@ -2044,9 +2045,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/wood}", qty: 8},
-      {name: "#{item/thread}", qty: 2},
-      {name: "#{item/arrow}", qty: 2},
+      { name: "#{item/wood}", qty: 8 },
+      { name: "#{item/thread}", qty: 2 },
+      { name: "#{item/arrow}", qty: 2 },
     ],
   },
   "skull-bow": {
@@ -2056,9 +2057,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/iron-ingot}", qty: 8},
-      {name: "#{item/leather}", qty: 2},
-      {name: "#{item/bone}", qty: 4},
+      { name: "#{item/iron-ingot}", qty: 8 },
+      { name: "#{item/leather}", qty: 2 },
+      { name: "#{item/bone}", qty: 4 },
     ],
   },
   "crystal-bow": {
@@ -2068,9 +2069,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/steel}", qty: 6},
-      {name: "#{item/glass}", qty: 3},
-      {name: "#{item/crystal}", qty: 12},
+      { name: "#{item/steel}", qty: 6 },
+      { name: "#{item/glass}", qty: 3 },
+      { name: "#{item/crystal}", qty: 12 },
     ],
   },
   "demon-bow": {
@@ -2080,9 +2081,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/royal-steel}", qty: 5},
-      {name: "#{item/royal-clothing}", qty: 5},
-      {name: "#{item/demon-horn}", qty: 50},
+      { name: "#{item/royal-steel}", qty: 5 },
+      { name: "#{item/royal-clothing}", qty: 5 },
+      { name: "#{item/demon-horn}", qty: 50 },
     ],
   },
   "basic-amulet": {
@@ -2092,9 +2093,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/iron-ingot}", qty: 4},
-      {name: "#{item/ruby}", qty: 1},
-      {name: "#{item/emerald}", qty: 1},
+      { name: "#{item/iron-ingot}", qty: 4 },
+      { name: "#{item/ruby}", qty: 1 },
+      { name: "#{item/emerald}", qty: 1 },
     ],
   },
   "slimy-amulet": {
@@ -2104,10 +2105,10 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/iron-ingot}", qty: 4},
-      {name: "#{item/topaz}", qty: 1},
-      {name: "#{item/amethyst}", qty: 1},
-      {name: "#{item/jelly}", qty: 8},
+      { name: "#{item/iron-ingot}", qty: 4 },
+      { name: "#{item/topaz}", qty: 1 },
+      { name: "#{item/amethyst}", qty: 1 },
+      { name: "#{item/jelly}", qty: 8 },
     ],
   },
   "bone-amulet": {
@@ -2117,10 +2118,10 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/steel}", qty: 8},
-      {name: "#{item/ruby}", qty: 1},
-      {name: "#{item/amethyst}", qty: 1},
-      {name: "#{item/bone}", qty: 20},
+      { name: "#{item/steel}", qty: 8 },
+      { name: "#{item/ruby}", qty: 1 },
+      { name: "#{item/amethyst}", qty: 1 },
+      { name: "#{item/bone}", qty: 20 },
     ],
   },
   "crystal-amulet": {
@@ -2130,10 +2131,10 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/royal-steel}", qty: 2},
-      {name: "#{item/emerald}", qty: 2},
-      {name: "#{item/topaz}", qty: 2},
-      {name: "#{item/crystal}", qty: 40},
+      { name: "#{item/royal-steel}", qty: 2 },
+      { name: "#{item/emerald}", qty: 2 },
+      { name: "#{item/topaz}", qty: 2 },
+      { name: "#{item/crystal}", qty: 40 },
     ],
   },
   "demon-amulet": {
@@ -2143,12 +2144,12 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/electronics}", qty: 5},
-      {name: "#{item/ruby}", qty: 5},
-      {name: "#{item/emerald}", qty: 5},
-      {name: "#{item/topaz}", qty: 5},
-      {name: "#{item/amethyst}", qty: 5},
-      {name: "#{item/demon-horn}", qty: 80},
+      { name: "#{item/electronics}", qty: 5 },
+      { name: "#{item/ruby}", qty: 5 },
+      { name: "#{item/emerald}", qty: 5 },
+      { name: "#{item/topaz}", qty: 5 },
+      { name: "#{item/amethyst}", qty: 5 },
+      { name: "#{item/demon-horn}", qty: 80 },
     ],
   },
   "basic-boots": {
@@ -2159,9 +2160,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/iron-ingot}", qty: 5},
-      {name: "#{item/thread}", qty: 5},
-      {name: "#{item/jelly}", qty: 10},
+      { name: "#{item/iron-ingot}", qty: 5 },
+      { name: "#{item/thread}", qty: 5 },
+      { name: "#{item/jelly}", qty: 10 },
     ],
   },
   "metal-boots": {
@@ -2172,9 +2173,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/steel}", qty: 5},
-      {name: "#{item/leather}", qty: 5},
-      {name: "#{item/bone}", qty: 20},
+      { name: "#{item/steel}", qty: 5 },
+      { name: "#{item/leather}", qty: 5 },
+      { name: "#{item/bone}", qty: 20 },
     ],
   },
   "master-boots": {
@@ -2185,9 +2186,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/steel}", qty: 5},
-      {name: "#{item/royal-clothing}", qty: 5},
-      {name: "#{item/lavender}", qty: 40},
+      { name: "#{item/steel}", qty: 5 },
+      { name: "#{item/royal-clothing}", qty: 5 },
+      { name: "#{item/lavender}", qty: 40 },
     ],
   },
   "robotic-boots": {
@@ -2198,9 +2199,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/electronics}", qty: 5},
-      {name: "#{item/fiberglass}", qty: 5},
-      {name: "#{item/cinderbloom}", qty: 50},
+      { name: "#{item/electronics}", qty: 5 },
+      { name: "#{item/fiberglass}", qty: 5 },
+      { name: "#{item/cinderbloom}", qty: 50 },
     ],
   },
   "basic-gloves": {
@@ -2210,9 +2211,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/iron-ingot}", qty: 5},
-      {name: "#{item/thread}", qty: 5},
-      {name: "#{item/bone}", qty: 10},
+      { name: "#{item/iron-ingot}", qty: 5 },
+      { name: "#{item/thread}", qty: 5 },
+      { name: "#{item/bone}", qty: 10 },
     ],
   },
   "metal-gloves": {
@@ -2222,9 +2223,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/steel}", qty: 5},
-      {name: "#{item/leather}", qty: 5},
-      {name: "#{item/nightshade}", qty: 20},
+      { name: "#{item/steel}", qty: 5 },
+      { name: "#{item/leather}", qty: 5 },
+      { name: "#{item/nightshade}", qty: 20 },
     ],
   },
   "master-gloves": {
@@ -2234,9 +2235,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/steel}", qty: 5},
-      {name: "#{item/royal-clothing}", qty: 5},
-      {name: "#{item/lavender}", qty: 40},
+      { name: "#{item/steel}", qty: 5 },
+      { name: "#{item/royal-clothing}", qty: 5 },
+      { name: "#{item/lavender}", qty: 40 },
     ],
   },
   "robotic-gloves": {
@@ -2246,9 +2247,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/electronics}", qty: 5},
-      {name: "#{item/fiberglass}", qty: 5},
-      {name: "#{item/cinderbloom}", qty: 50},
+      { name: "#{item/electronics}", qty: 5 },
+      { name: "#{item/fiberglass}", qty: 5 },
+      { name: "#{item/cinderbloom}", qty: 50 },
     ],
   },
   "moldy-book": {
@@ -2258,8 +2259,8 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/inscription-table}",
-      {name: "#{item/thread}", qty: 5},
-      {name: "#{item/paper}", qty: 5},
+      { name: "#{item/thread}", qty: 5 },
+      { name: "#{item/paper}", qty: 5 },
     ],
   },
   "slimy-tome": {
@@ -2269,9 +2270,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/inscription-table}",
-      {name: "#{item/leather}", qty: 5},
-      {name: "#{item/paper}", qty: 5},
-      {name: "#{item/jelly}", qty: 15},
+      { name: "#{item/leather}", qty: 5 },
+      { name: "#{item/paper}", qty: 5 },
+      { name: "#{item/jelly}", qty: 15 },
     ],
   },
   "necronomicon": {
@@ -2281,9 +2282,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/inscription-table}",
-      {name: "#{item/royal-clothing}", qty: 10},
-      {name: "#{item/paper}", qty: 10},
-      {name: "#{item/bone}", qty: 20},
+      { name: "#{item/royal-clothing}", qty: 10 },
+      { name: "#{item/paper}", qty: 10 },
+      { name: "#{item/bone}", qty: 20 },
     ],
   },
   "glacial-scriptures": {
@@ -2293,9 +2294,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/inscription-table}",
-      {name: "#{item/fiberglass}", qty: 5},
-      {name: "#{item/paper}", qty: 20},
-      {name: "#{item/crystal}", qty: 40},
+      { name: "#{item/fiberglass}", qty: 5 },
+      { name: "#{item/paper}", qty: 20 },
+      { name: "#{item/crystal}", qty: 40 },
     ],
   },
   "hellfire-glyphs": {
@@ -2305,9 +2306,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/inscription-table}",
-      {name: "#{item/fiberglass}", qty: 5},
-      {name: "#{item/paper}", qty: 50},
-      {name: "#{item/demon-horn}", qty: 50},
+      { name: "#{item/fiberglass}", qty: 5 },
+      { name: "#{item/paper}", qty: 50 },
+      { name: "#{item/demon-horn}", qty: 50 },
     ],
   },
   // "basic-backpack": {
@@ -2323,8 +2324,8 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/sewing-station}",
-      {name: "#{item/leather}", qty: 4},
-      {name: "#{item/flower}", qty: 2},
+      { name: "#{item/leather}", qty: 4 },
+      { name: "#{item/flower}", qty: 2 },
     ],
   },
   "medium-backpack": {
@@ -2334,9 +2335,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/sewing-station}",
-      {name: "#{item/leather}", qty: 4},
-      {name: "#{item/thread}", qty: 4},
-      {name: "#{item/jelly}", qty: 8},
+      { name: "#{item/leather}", qty: 4 },
+      { name: "#{item/thread}", qty: 4 },
+      { name: "#{item/jelly}", qty: 8 },
     ],
   },
   "big-backpack": {
@@ -2346,9 +2347,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/sewing-station}",
-      {name: "#{item/royal-clothing}", qty: 1},
-      {name: "#{item/thread}", qty: 8},
-      {name: "#{item/bone}", qty: 12},
+      { name: "#{item/royal-clothing}", qty: 1 },
+      { name: "#{item/thread}", qty: 8 },
+      { name: "#{item/bone}", qty: 12 },
     ],
   },
   "huge-backpack": {
@@ -2358,9 +2359,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/sewing-station}",
-      {name: "#{item/royal-clothing}", qty: 3},
-      {name: "#{item/leather}", qty: 6},
-      {name: "#{item/crystal}", qty: 30},
+      { name: "#{item/royal-clothing}", qty: 3 },
+      { name: "#{item/leather}", qty: 6 },
+      { name: "#{item/crystal}", qty: 30 },
     ],
   },
   "tycoon-backpack": {
@@ -2370,9 +2371,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/sewing-station}",
-      {name: "#{item/fiberglass}", qty: 2},
-      {name: "#{item/royal-clothing}", qty: 4},
-      {name: "#{item/demon-horn}", qty: 40},
+      { name: "#{item/fiberglass}", qty: 2 },
+      { name: "#{item/royal-clothing}", qty: 4 },
+      { name: "#{item/demon-horn}", qty: 40 },
     ],
   },
   // "basic-wallet": {
@@ -2389,8 +2390,8 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/sewing-station}",
-      {name: "#{item/thread}", qty: 8},
-      {name: "#{item/gold-ingot}", qty: 4},
+      { name: "#{item/thread}", qty: 8 },
+      { name: "#{item/gold-ingot}", qty: 4 },
     ],
   },
   "medium-wallet": {
@@ -2400,10 +2401,10 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/sewing-station}",
-      {name: "#{item/thread}", qty: 8},
-      {name: "#{item/emerald}", qty: 1},
-      {name: "#{item/topaz}", qty: 1},
-      {name: "#{item/hot-pepper}", qty: 12},
+      { name: "#{item/thread}", qty: 8 },
+      { name: "#{item/emerald}", qty: 1 },
+      { name: "#{item/topaz}", qty: 1 },
+      { name: "#{item/hot-pepper}", qty: 12 },
     ],
   },
   "big-wallet": {
@@ -2413,10 +2414,10 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/sewing-station}",
-      {name: "#{item/leather}", qty: 10},
-      {name: "#{item/ruby}", qty: 1},
-      {name: "#{item/amethyst}", qty: 1},
-      {name: "#{item/nightshade}", qty: 20},
+      { name: "#{item/leather}", qty: 10 },
+      { name: "#{item/ruby}", qty: 1 },
+      { name: "#{item/amethyst}", qty: 1 },
+      { name: "#{item/nightshade}", qty: 20 },
     ],
   },
   "huge-wallet": {
@@ -2426,12 +2427,12 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/sewing-station}",
-      {name: "#{item/royal-clothing}", qty: 5},
-      {name: "#{item/ruby}", qty: 2},
-      {name: "#{item/emerald}", qty: 2},
-      {name: "#{item/topaz}", qty: 2},
-      {name: "#{item/amethyst}", qty: 2},
-      {name: "#{item/lavender}", qty: 40},
+      { name: "#{item/royal-clothing}", qty: 5 },
+      { name: "#{item/ruby}", qty: 2 },
+      { name: "#{item/emerald}", qty: 2 },
+      { name: "#{item/topaz}", qty: 2 },
+      { name: "#{item/amethyst}", qty: 2 },
+      { name: "#{item/lavender}", qty: 40 },
     ],
   },
   "tycoon-wallet": {
@@ -2441,12 +2442,12 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/sewing-station}",
-      {name: "#{item/fiberglass}", qty: 5},
-      {name: "#{item/ruby}", qty: 3},
-      {name: "#{item/emerald}", qty: 3},
-      {name: "#{item/topaz}", qty: 3},
-      {name: "#{item/amethyst}", qty: 3},
-      {name: "#{item/cinderbloom}", qty: 60},
+      { name: "#{item/fiberglass}", qty: 5 },
+      { name: "#{item/ruby}", qty: 3 },
+      { name: "#{item/emerald}", qty: 3 },
+      { name: "#{item/topaz}", qty: 3 },
+      { name: "#{item/amethyst}", qty: 3 },
+      { name: "#{item/cinderbloom}", qty: 60 },
     ],
   },
   "ancient-seal": {
@@ -2607,9 +2608,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/iron-ingot}", qty: 12},
-      {name: "#{item/wood}", qty: 8},
-      {name: "#{item/jelly}", qty: 8},
+      { name: "#{item/iron-ingot}", qty: 12 },
+      { name: "#{item/wood}", qty: 8 },
+      { name: "#{item/jelly}", qty: 8 },
     ],
   },
   "nomads-shovel": {
@@ -2620,9 +2621,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/steel}", qty: 10},
-      {name: "#{item/sand}", qty: 32},
-      {name: "#{item/bottled-beetle}", qty: 5},
+      { name: "#{item/steel}", qty: 10 },
+      { name: "#{item/sand}", qty: 32 },
+      { name: "#{item/bottled-beetle}", qty: 5 },
     ],
   },
   "royal-shovel": {
@@ -2633,9 +2634,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/royal-steel}", qty: 2},
-      {name: "#{item/plastic}", qty: 4},
-      {name: "#{item/topaz}", qty: 8},
+      { name: "#{item/royal-steel}", qty: 2 },
+      { name: "#{item/plastic}", qty: 4 },
+      { name: "#{item/topaz}", qty: 8 },
     ],
   },
   "robotic-shovel": {
@@ -2646,16 +2647,16 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/forge}",
-      {name: "#{item/electronics}", qty: 2},
-      {name: "#{item/plastic}", qty: 6},
-      {name: "#{item/bottled-deathmoth}", qty: 16},
+      { name: "#{item/electronics}", qty: 2 },
+      { name: "#{item/plastic}", qty: 6 },
+      { name: "#{item/bottled-deathmoth}", qty: 16 },
     ],
   },
   "thunder-rod": {
     name: "雷杖",
     desc: [
       "发出1道射线，用来电击敌人与给建筑物充能",
-      
+
       "来自#{land/ancient-dungeon}",
     ],
   },
@@ -2687,9 +2688,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/factory}",
-      {name: "#{item/fiberglass}", qty: 100},
-      {name: "#{item/electronics}", qty: 100},
-      {name: "#{item/great-skull}", qty: 100},
+      { name: "#{item/fiberglass}", qty: 100 },
+      { name: "#{item/electronics}", qty: 100 },
+      { name: "#{item/great-skull}", qty: 100 },
     ],
   },
   "meteor-rod": {
@@ -2699,9 +2700,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/spirit-crystal}",
-      {name: "#{item/lava-eel}", qty: 10},
-      {name: "#{item/fossil}", qty: 10},
-      {name: "#{item/great-skull}", qty: 100},
+      { name: "#{item/lava-eel}", qty: 10 },
+      { name: "#{item/fossil}", qty: 10 },
+      { name: "#{item/great-skull}", qty: 100 },
     ],
   },
   "storm-rod": {
@@ -2711,9 +2712,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/spirit-crystal}",
-      {name: "#{item/anchor}", qty: 10},
-      {name: "#{item/sunken-ankh}", qty: 10},
-      {name: "#{item/great-skull}", qty: 100},
+      { name: "#{item/anchor}", qty: 10 },
+      { name: "#{item/sunken-ankh}", qty: 10 },
+      { name: "#{item/great-skull}", qty: 100 },
     ],
   },
   "blizzard-rod": {
@@ -2723,9 +2724,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/spirit-crystal}",
-      {name: "#{item/frozen-relic}", qty: 10},
-      {name: "#{item/frozen-squid}", qty: 10},
-      {name: "#{item/great-skull}", qty: 100},
+      { name: "#{item/frozen-relic}", qty: 10 },
+      { name: "#{item/frozen-squid}", qty: 10 },
+      { name: "#{item/great-skull}", qty: 100 },
     ],
   },
   "death-rod": {
@@ -2735,9 +2736,9 @@ var items_rawdata = {
     ],
     ingrd: [
       "#{struct/spirit-crystal}",
-      {name: "#{item/skeleton-fish}", qty: 10},
-      {name: "#{item/sphynx}", qty: 10},
-      {name: "#{item/great-skull}", qty: 100},
+      { name: "#{item/skeleton-fish}", qty: 10 },
+      { name: "#{item/sphynx}", qty: 10 },
+      { name: "#{item/great-skull}", qty: 100 },
     ],
   },
 };
@@ -2774,15 +2775,15 @@ var structs_rawdata = {
     //   "#{item/cooked-meat}"
     // ],
     ingrd: [
-      {name: "#{item/stone}", qty:10},
+      { name: "#{item/stone}", qty: 10 },
     ],
   },
   "forge": {
     name: "锻造台",
     desc: [],
     ingrd: [
-      {name: "#{item/brick}", qty:10},
-      {name: "#{item/iron-ingot}", qty:4},
+      { name: "#{item/brick}", qty: 10 },
+      { name: "#{item/iron-ingot}", qty: 4 },
     ],
     // prod: [
     //   "#{item/coin}",
@@ -2801,9 +2802,9 @@ var structs_rawdata = {
     desc: [
     ],
     ingrd: [
-      {name: "#{item/fiber}", qty:2},
-      {name: "#{item/wood}", qty:10},
-      {name: "#{item/brick}", qty:4},
+      { name: "#{item/fiber}", qty: 2 },
+      { name: "#{item/wood}", qty: 10 },
+      { name: "#{item/brick}", qty: 4 },
     ],
   },
   "mining-rod": {
@@ -2813,8 +2814,8 @@ var structs_rawdata = {
       "不会攻击生物，不会收集#{struct/fish-trap}"
     ],
     ingrd: [
-      {name: "#{item/fiber}", qty:2},
-      {name: "#{item/brick}", qty:8},
+      { name: "#{item/fiber}", qty: 2 },
+      { name: "#{item/brick}", qty: 8 },
     ],
   },
   "offshore-drill": {
@@ -2823,26 +2824,26 @@ var structs_rawdata = {
       "必须建在水上"
     ],
     ingrd: [
-      {name: "#{item/fiber}", qty:5},
-      {name: "#{item/brick}", qty:20},
+      { name: "#{item/fiber}", qty: 5 },
+      { name: "#{item/brick}", qty: 20 },
     ],
   },
   "flower-press": {
     name: "花瓣压缩机",
     desc: [],
     ingrd: [
-      {name: "#{item/flower}", qty:10},
-      {name: "#{item/steel}", qty:5},
-      {name: "#{item/brick}", qty:30},
+      { name: "#{item/flower}", qty: 10 },
+      { name: "#{item/steel}", qty: 5 },
+      { name: "#{item/brick}", qty: 30 },
     ],
   },
   "factory": {
     name: "工厂",
     desc: [],
     ingrd: [
-      {name: "#{item/glass}", qty:10},
-      {name: "#{item/royal-steel}", qty:4},
-      {name: "#{item/brick}", qty:20},
+      { name: "#{item/glass}", qty: 10 },
+      { name: "#{item/royal-steel}", qty: 4 },
+      { name: "#{item/brick}", qty: 20 },
     ],
   },
   "power-plant": {
@@ -2851,9 +2852,9 @@ var structs_rawdata = {
       "增加覆盖范围内建筑的生产效率"
     ],
     ingrd: [
-      {name: "#{item/glass}", qty:10},
-      {name: "#{item/electronics}", qty:4},
-      {name: "#{item/brick}", qty:20},
+      { name: "#{item/glass}", qty: 10 },
+      { name: "#{item/electronics}", qty: 4 },
+      { name: "#{item/brick}", qty: 20 },
     ],
   },
   "ballista": {
@@ -2862,9 +2863,9 @@ var structs_rawdata = {
       "自动攻击附近敌人"
     ],
     ingrd: [
-      {name: "#{item/arrow}", qty:20},
-      {name: "#{item/wood}", qty:80},
-      {name: "#{item/brick}", qty:20},
+      { name: "#{item/arrow}", qty: 20 },
+      { name: "#{item/wood}", qty: 80 },
+      { name: "#{item/brick}", qty: 20 },
     ],
   },
   "bridge": {
@@ -2874,7 +2875,7 @@ var structs_rawdata = {
       "可将建筑修建在上面",
     ],
     ingrd: [
-      {name: "#{item/wood}", qty:4},
+      { name: "#{item/wood}", qty: 4 },
     ],
   },
   "fish-trap": {
@@ -2888,8 +2889,8 @@ var structs_rawdata = {
       "在#{land/fire-galaxy 焦土}可捕获#{item/lava-eel}",
     ],
     ingrd: [
-      {name: "#{item/wood}", qty: 4},
-      {name: "#{item/berry}", qty: 4},
+      { name: "#{item/wood}", qty: 4 },
+      { name: "#{item/berry}", qty: 4 },
     ]
   },
   "torch": {
@@ -2908,9 +2909,9 @@ var structs_rawdata = {
     name: "风车",
     desc: [],
     ingrd: [
-      {name: "#{item/wood}", qty:40},
-      {name: "#{item/brick}", qty:30},
-      {name: "#{item/thread}", qty:15},
+      { name: "#{item/wood}", qty: 40 },
+      { name: "#{item/brick}", qty: 30 },
+      { name: "#{item/thread}", qty: 15 },
     ],
   },
   "sprinkler": {
@@ -2919,7 +2920,7 @@ var structs_rawdata = {
       "增加附近农作物生长速度"
     ],
     ingrd: [
-      {name: "#{item/iron-ingot}", qty:4},
+      { name: "#{item/iron-ingot}", qty: 4 },
     ],
   },
   "cookpot": {
@@ -2941,8 +2942,8 @@ var structs_rawdata = {
       "收集的道具会自动送入仓库，但你在地牢里就没用了",
     ],
     ingrd: [
-      {name: "#{item/steel}", qty:3},
-      {name: "#{item/brick}", qty:10},
+      { name: "#{item/steel}", qty: 3 },
+      { name: "#{item/brick}", qty: 10 },
     ],
   },
   "market": {
@@ -2951,9 +2952,9 @@ var structs_rawdata = {
       "可买卖道具，每次进货3种道具，解锁#{skill/supply}可增加进货量至6种"
     ],
     ingrd: [
-      {name: "#{item/wood}", qty:40},
-      {name: "#{item/brick}", qty:20},
-      {name: "#{item/leather}", qty:5},
+      { name: "#{item/wood}", qty: 40 },
+      { name: "#{item/brick}", qty: 20 },
+      { name: "#{item/leather}", qty: 5 },
     ],
   },
   "bank": {
@@ -2962,9 +2963,9 @@ var structs_rawdata = {
       "自动生钱"
     ],
     ingrd: [
-      {name: "#{item/gold-ingot}", qty:10},
-      {name: "#{item/steel}", qty:1},
-      {name: "#{item/brick}", qty:20},
+      { name: "#{item/gold-ingot}", qty: 10 },
+      { name: "#{item/steel}", qty: 1 },
+      { name: "#{item/brick}", qty: 20 },
     ],
   },
   "lighthouse": {
@@ -2982,8 +2983,8 @@ var structs_rawdata = {
       "集齐2个或以上的图案即中奖，集齐3个能赢取#{feat/winner 头奖}"
     ],
     ingrd: [
-      {name: "#{item/electronics}", qty:1},
-      {name: "#{item/brick}", qty:20},
+      { name: "#{item/electronics}", qty: 1 },
+      { name: "#{item/brick}", qty: 20 },
     ],
   },
   "inscription-table": {
@@ -2992,8 +2993,8 @@ var structs_rawdata = {
       "可制作卷轴和书籍"
     ],
     ingrd: [
-      {name: "#{item/wood}", qty:12},
-      {name: "#{item/brick}", qty:20},
+      { name: "#{item/wood}", qty: 12 },
+      { name: "#{item/brick}", qty: 20 },
     ],
   },
   "cauldron": {
@@ -3002,9 +3003,9 @@ var structs_rawdata = {
       "可制作炸弹和药剂"
     ],
     ingrd: [
-      {name: "#{item/flower}", qty:4},
-      {name: "#{item/iron-ingot}", qty:8},
-      {name: "#{item/brick}", qty:20},
+      { name: "#{item/flower}", qty: 4 },
+      { name: "#{item/iron-ingot}", qty: 8 },
+      { name: "#{item/brick}", qty: 20 },
     ],
   },
   "shrine": {
@@ -3013,9 +3014,9 @@ var structs_rawdata = {
       "每隔一段时间可激活一个#{buff/shrine-hoarder -祭坛buff}"
     ],
     ingrd: [
-      {name: "#{item/crystal}", qty:30},
-      {name: "#{item/royal-steel}", qty:1},
-      {name: "#{item/brick}", qty:50},
+      { name: "#{item/crystal}", qty: 30 },
+      { name: "#{item/royal-steel}", qty: 1 },
+      { name: "#{item/brick}", qty: 50 },
     ],
   },
   "spirit-crystal": {
@@ -3023,8 +3024,8 @@ var structs_rawdata = {
     desc: [
     ],
     ingrd: [
-      {name: "#{item/crystal}", qty:50},
-      {name: "#{item/steel}", qty:20},
+      { name: "#{item/crystal}", qty: 50 },
+      { name: "#{item/steel}", qty: 20 },
     ],
   },
 };
@@ -4810,6 +4811,82 @@ for (let key in feats_rawdata) {
   data["key"] = key;
   feats[key] = Feat.newInstance(data);
 }
+
+
+
+
+var droidsNameList = [
+  "404framesnotfound",
+  "Aaron",
+  "Adrian",
+  "Akmaori",
+  "Balduron04",
+  "Bee",
+  "BotDoug",
+  "Brad",
+  "Cave",
+  "Celso",
+  "ChapDaddy",
+  "Ckip",
+  "Clay",
+  "Cresyls",
+  "Crispin",
+  "DCode",
+  "Dane",
+  "Darcy",
+  "Dayna",
+  "Dillion",
+  "Entity",
+  "Everkiin",
+  "Exonen",
+  "Finim",
+  "Flaxzico",
+  "Garret",
+  "Godsal",
+  "Gregory",
+  "GregorySo",
+  "Grindthisgame",
+  "Jordyn",
+  "Katten",
+  "Keyy",
+  "Kitteh",
+  "Kkuri",
+  "Kuo",
+  "LucyBowe",
+  "Matthew",
+  "Maxyrix",
+  "Minerry",
+  "MisterNumbers",
+  "Mitsuninja",
+  "Nathan",
+  "Nellissen",
+  "Nemerensis",
+  "Niels",
+  "Niko",
+  "Nils",
+  "Nya",
+  "Olevare",
+  "PerplexasaurusRex",
+  "Racoon",
+  "Raiigo",
+  "Remy",
+  "Ryan",
+  "Samoansole",
+  "Sawedoffsob",
+  "Simon",
+  "SirGunGun",
+  "Steini225",
+  "Sunshine",
+  "Vawl",
+  "Warmachine",
+  "Wilbur",
+  "Wtg",
+  "Xanthuriaus",
+  "Yiheng",
+  "Zaddn",
+  "Zindy",
+  "wW47",
+];
 
 
 /**
