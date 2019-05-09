@@ -2979,7 +2979,7 @@ var structs_rawdata = {
     name: "老虎机",
     desc: [
       "可赢取钱、宝石或遗物",
-      "集齐2个或3个一样的图案会奖励道具，集齐3个能赢取#{feat/winner 头奖}"
+      "集齐2个或以上的图案即中奖，集齐3个能赢取#{feat/winner 头奖}"
     ],
     ingrd: [
       {name: "#{item/electronics}", qty:1},
@@ -3192,6 +3192,8 @@ var lands_rawdata = {
     name: "焦土-火焰神庙",
     desc: [
       '<a href="map-fire-temple.html">地图</a>，标注了4个隐藏房间',
+      "左上角有7个火盆，用火焰武器点燃它们可获得奖励",
+      "右边有6个#{obj/volcano-pushdown-pillar}，按一定顺序按下它们会获得奖励，在左下角有两个#{obj/fairy}的房间地板上有提示",
       "奖励#{item/fire-rod} #{item/fire-seal}",
     ],
   },
@@ -3347,6 +3349,7 @@ var lands_rawdata = {
     name: "墓地-骷髅迷宫",
     desc: [
       '<a href="map-skull-maze.html">地图</a>，标注了3个隐藏房间',
+      "地图中部有一个鲜血祭坛，可牺牲1点最大生命值换取一个#{buff/gluttony -永久性增益}",
       "奖励#{item/necro-rod} #{item/skull-seal}",
     ],
   },
@@ -4128,8 +4131,7 @@ var objs_rawdata = {
   "blue-chest": {
     name: "蓝宝箱",
     desc: [
-      "击败boss后出现",
-      "内含对应地牢的#{item/thunder-rod -法杖}",
+      "内含对应地牢的#{item/thunder-rod -法杖}和#{item/ancient-seal -印章}",
     ],
   },
   "big-chest": {
