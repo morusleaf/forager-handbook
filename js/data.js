@@ -3332,7 +3332,7 @@ var lands_rawdata = {
   "frozen-obelisk": {
     name: "雪地-工艺尖塔",
     desc: [
-      "提供#{buff/builder}"
+      "提供#{buff/crafting}"
     ],
   },
   "skull-galaxy": {
