@@ -160,10 +160,10 @@ class Item extends ForagerObject {
     let $card = super.infoDOM($img);
     let $desc = $card.children(".forager-desc");
     if (this.energy !== undefined) {
-      $("<li>", { class: "list-group-item" }).html("能量:" + this.energy).prependTo($desc);
+      $("<li>", { class: "list-group-item" }).html("能量：" + this.energy).prependTo($desc);
     }
     if (this.value !== undefined) {
-      $("<li>", { class: "list-group-item" }).html("价值:" + this.value).prependTo($desc);
+      $("<li>", { class: "list-group-item" }).html("价值：" + this.value).prependTo($desc);
     }
     if (this._require.length > 0) {
       let requires = this._require.map(st => lookupName(st).href());
@@ -180,7 +180,7 @@ class Item extends ForagerObject {
     }
     if (this._source.length != 0) {
       let sources = this._source.map(st => lookupName(st).href());
-      $("<li>", { class: "list-group-item" }).html(`来源:${sources.join(" ")}`).appendTo($desc);
+      $("<li>", { class: "list-group-item" }).html(`来源：${sources.join(" ")}`).appendTo($desc);
     }
     if (this._ingrd.length != 0) createIngrdDOM(this._ingrd).appendTo($desc);
     if (this._opt_ingrd.length != 0) {
@@ -237,7 +237,7 @@ class Struct extends ForagerObject {
         let object = lookupName(st);
         products.push(object.href());
       });
-      $("<li>", { class: "list-group-item" }).html("产物:" + products.join(" ")).prependTo($desc);
+      $("<li>", { class: "list-group-item" }).html("产物：" + products.join(" ")).prependTo($desc);
     }
     if (this._ingrd.length != 0) {
       let ingredients = [];
@@ -247,7 +247,7 @@ class Struct extends ForagerObject {
         let object = lookupName(st);
         ingredients.push(`${object.href()}(${quantity})`);
       });
-      $("<li>", { class: "list-group-item" }).html("材料:" + ingredients.join(" ")).prependTo($desc);
+      $("<li>", { class: "list-group-item" }).html("材料：" + ingredients.join(" ")).prependTo($desc);
     }
     return $card;
   }
@@ -312,7 +312,7 @@ class Obj extends ForagerObject {
     }
     if (this._drop.length != 0) {
       let drops = this._drop.map(st => lookupName(st).href());
-      $("<li>", { class: "list-group-item" }).html("掉落:" + drops.join(" ")).appendTo($desc);
+      $("<li>", { class: "list-group-item" }).html("掉落：" + drops.join(" ")).appendTo($desc);
     }
     return $card;
   }
