@@ -37,3 +37,8 @@ img {
     display: flex;
     flex: 1 1 auto;
 }
+
+#info {
+    z-index: 1050;
+    top: 80px;
+}

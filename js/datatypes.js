@@ -58,9 +58,9 @@ class ForagerObject {
     return $pane;
   }
 
-  referThumbnailDOM() {
-    return $(`#${this.key}`);
-  }
+  // referThumbnailDOM() {
+  //   return $(`#${this.key}`);
+  // }
 
   infoDOM($img) {
     let $card = $("<div>", { class: "card" });
@@ -76,7 +76,17 @@ class ForagerObject {
     this.forEachDesc(function (line) {
       $("<li>", { class: "list-group-item" }).html(unfoldMacro(line)).appendTo($desc);
     });
-    return $card.append($imgDiv, $title, $desc);
+    $card.append($imgDiv, $title, $desc);
+    if ($(window).width() < 768) {
+      let $close = $("<button>", {type: "button", class: "btn btn-secondary"});
+    $close.click(function (){
+      renderer.deselect();
+      renderer.$info.empty();
+    });
+    $("<span>").text("关闭").appendTo($close);
+    $card.append($close);
+    }
+    return $card;
   }
 
   href(prefix, showIcon, alias) {

@@ -45,29 +45,37 @@ class ForagerRenderer {
   constructor($info) {
     this.selectedObject = null;
     this.$info = $info;
+    this.selectedDOM = null;
   }
 
   deselect() {
     if (this.selectedObject === null) return;
-    let $dom = this.selectedObject.referThumbnailDOM();
+    let $dom = this.selectedDOM;
     $dom.css("background-color", "transparent");
+    // $(".icon").css("pointer-events", "auto");
     this.selectedObject = null;
   }
 
   select(object, $dom) {
     this.deselect();
     this.selectedObject = object;
+    this.selectedDOM = $dom;
     $dom.css("background-color", "grey");
+    // reference: https://stackoverflow.com/questions/3538489/html-css-make-a-div-invisible-to-clicks
+    // $(".icon").css("pointer-events", "none");
     this.viewObject(object);
   }
 
   linkIcon($icon, object) {
     let self = this;
-    $icon.hover(function () {
-      self.viewObject(object);
-    }, function () {
-      self.viewObject(self.selectedObject);
-    });
+    // Ugly hacking to avoid conflict between hover and click on mobile devices
+    if ($(window).width() >= 768) {
+      $icon.hover(function () {
+        self.viewObject(object);
+      }, function () {
+        self.viewObject(self.selectedObject);
+      });
+    }
     $icon.click(function () {
       self.select(object, $icon);
     });
