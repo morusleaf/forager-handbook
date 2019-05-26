@@ -39,6 +39,9 @@ img {
 }
 
 #info {
-    z-index: 1050;
     top: 80px;
+}
+
+.navbar {
+    z-index: 1050;
 }
