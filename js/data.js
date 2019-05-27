@@ -3298,7 +3298,7 @@ var lands_rawdata = {
     name: "雪地-狐狸",
     desc: [
       "没时间解释了，快给狐狸500个#{item/poop}！",
-      "奖励#{obj/big-chest}",
+      "奖励#{obj/big-chest}，另外送你一块#{item/brick}",
       "地上的神秘数字10-9-12可用于解谜#{land/fire-numbers}",
     ],
   },
