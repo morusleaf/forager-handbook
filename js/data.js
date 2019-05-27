@@ -790,6 +790,7 @@ var items_rawdata = {
     name: "沙子",
     value: 1,
     desc: [
+      "后期需求量很大，可以多建几个#{struct/lighthouse}(增加周围掉落物数量)，然后在附近用#{item/shovel}挖"
     ],
     opt_ingrd: [
       [
@@ -2972,7 +2973,7 @@ var structs_rawdata = {
     name: "灯塔",
     desc: [
       "必须建在水上",
-      "在附近额外获得50%资源",
+      "在附近额外收获50%资源(即增加周围掉落物数量)",
     ],
     ingrd: undefined,
   },
@@ -3076,8 +3077,8 @@ var lands_rawdata = {
   "grass-museum": {
     name: "草地-博物馆",
     desc: [
-      "按要求给予道具，每完成一组会奖励#{obj/big-chest}",
-      "完成所有收集，奖励#{item/museum-seal}",
+      "按要求给予道具，每完成一组会奖励#{obj/big-chest}，共8个",
+      "完成所有收集，奖励#{obj/big-chest}内含#{item/museum-seal}",
     ],
   },
   "grass-pillars": {
@@ -3114,14 +3115,14 @@ var lands_rawdata = {
     desc: [
       "移动#{obj/electric-cube}可给附近的#{obj/receptor}充电",
       "建筑外墙有提示，暗格对应的#{obj/receptor}应断电，空格对应的#{obj/receptor}应充电",
-      "奖励#{item/ancient-galaxy-seal}"
+      "奖励#{obj/big-chest}内含#{item/ancient-galaxy-seal}"
     ],
   },
   "ancient-dungeon": {
     name: "沙漠-上古墓地",
     desc: [
       '<a href="map-ancient-tomb.html">地图</a>，标注了3个隐藏房间',
-      "奖励#{item/thunder-rod} #{item/ancient-seal}",
+      "奖励#{obj/blue-chest}(2)内含#{item/thunder-rod} #{item/ancient-seal}",
     ],
   },
   "ancient-eye-statue": {
@@ -3186,7 +3187,7 @@ var lands_rawdata = {
       "按下一个#{obj/volcano-pushdown-pillar}会翻转周围4个的状态(灭变亮，亮变灭)",
       "你的目标是使所有#{obj/volcano-pushdown-pillar}都熄灭",
       '这其实是一个经典的智力游戏<a href="https://en.wikipedia.org/wiki/Lights_Out_(game)">Lightsout</a>，我写了一个网页<a href="lightsout.html?galaxy">工具</a>帮你快速解谜',
-      "奖励#{item/fire-galaxy-seal} #{obj/small-chest}(4)"
+      "奖励#{obj/blue-chest}内含#{item/fire-galaxy-seal} #{obj/small-chest}(4)"
     ],
   },
   "fire-dungeon": {
@@ -3195,7 +3196,7 @@ var lands_rawdata = {
       '<a href="map-fire-temple.html">地图</a>，标注了4个隐藏房间',
       "左上角有7个火盆，用火焰武器点燃它们可获得奖励",
       "右边有6个#{obj/volcano-pushdown-pillar}，按一定顺序按下它们会获得奖励，在左下角有两个#{obj/fairy}的房间地板上有提示",
-      "奖励#{item/fire-rod} #{item/fire-seal}",
+      "奖励#{obj/blue-chest}(2)内含#{item/fire-rod} #{item/fire-seal}",
     ],
   },
   "fire-lightsout": {
@@ -3268,14 +3269,14 @@ var lands_rawdata = {
       "给它们编号：1<img src='img/other/computer-1.png'> 2<img src='img/other/computer-2.png'> 3<img src='img/other/computer-3.png'> 4<img src='img/other/computer-4.png'> 5<img src='img/other/computer-5.png'>",
       "电脑下的编码是2进制数字，我们无视前面的00110，只看后3位，001表示1，010表示2，011表示3，100表示4，101表示5",
       "只要让电脑上显示的符号对应下方的编码即可：5<img src='img/other/computer-5.png'> 3<img src='img/other/computer-3.png'> 4<img src='img/other/computer-4.png'> 2<img src='img/other/computer-2.png'> 4<img src='img/other/computer-4.png'>",
-      "奖励#{item/frozen-galaxy-seal} #{obj/small-chest}(4)"
+      "奖励#{obj/blue-chest}内含#{item/frozen-galaxy-seal} #{obj/small-chest}(4)"
     ],
   },
   "frozen-dungeon": {
     name: "雪地-水晶洞窟",
     desc: [
       '<a href="map-crystal-cave.html">地图</a>，标注了3个隐藏房间',
-      "奖励#{item/ice-rod} #{item/frozen-seal}",
+      "奖励#{obj/blue-chest}(2)内含#{item/ice-rod} #{item/frozen-seal}",
     ],
   },
   "frozen-sleeping-statue": {
@@ -3343,7 +3344,7 @@ var lands_rawdata = {
       "贵胄强人皆不动，伶牙俐齿我能通：#{item/key}",
       "坠落高空无寸伤，忽焉亡溺浅水瀼：#{item/paper}",
       "有头无颈，有眼无眉，无脚能走，有翅难飞：#{item/fish}",
-      "分别给予道具后，奖励#{item/skull-galaxy-seal}",
+      "分别给予道具后，奖励#{obj/blue-chest}内含#{item/skull-galaxy-seal}",
     ],
   },
   "skull-dungeon": {
@@ -3351,7 +3352,7 @@ var lands_rawdata = {
     desc: [
       '<a href="map-skull-maze.html">地图</a>，标注了3个隐藏房间',
       "地图中部有一个鲜血祭坛，可牺牲1点最大生命值换取一个#{buff/gluttony -永久性增益}",
-      "奖励#{item/necro-rod} #{item/skull-seal}",
+      "奖励#{obj/blue-chest}内含#{item/necro-rod} #{item/skull-seal}",
     ],
   },
   "skull-braziers": {
@@ -4132,7 +4133,7 @@ var objs_rawdata = {
   "blue-chest": {
     name: "蓝宝箱",
     desc: [
-      "内含对应地牢的#{item/thunder-rod -法杖}和#{item/ancient-seal -印章}",
+      "内含对应地牢的#{item/thunder-rod -法杖}和#{item/ancient-seal -印章}，以及银河的#{item/ancient-galaxy-seal -印章}",
     ],
   },
   "big-chest": {
@@ -4887,6 +4888,119 @@ var droidsNameList = [
   "Zindy",
   "wW47",
 ];
+
+
+
+var bigChestsList = [
+  {
+    source: "#{land/grass-fairy-queen}",
+  },
+  {
+    source: "#{land/grass-island}",
+  },
+  {
+    source: "#{land/grass-museum}",
+    qty: 9,
+  },
+  {
+    source: "#{land/grass-pillars}",
+  },
+  {
+    source: "#{land/grass-druid}",
+  },
+  {
+    source: "#{land/grass-rainbow}",
+  },
+  {
+    source: "#{land/ancient-galaxy}",
+  },
+  {
+    source: "#{land/ancient-dungeon}",
+    qty: 2,
+  },
+  {
+    source: "#{land/ancient-eye-statue}",
+  },
+  {
+    source: "#{land/ancient-monolith}",
+  },
+  {
+    source: "#{land/ancient-dig}",
+  },
+  {
+    source: "#{land/ancient-watchers}",
+  },
+  {
+    source: "#{land/ancient-princess}",
+  },
+  {
+    source: "#{land/ancient-oldman}",
+  },
+  {
+    source: "#{land/fire-galaxy}",
+  },
+  {
+    source: "#{land/fire-dungeon}",
+    qty: 2,
+  },
+  {
+    source: "#{land/fire-lightsout}",
+  },
+  {
+    source: "#{land/fire-numbers}",
+  },
+  {
+    source: "#{land/fire-wizard-tower}",
+  },
+  {
+    source: "#{land/fire-factory}",
+  },
+  {
+    source: "#{land/frozen-galaxy}",
+  },
+  {
+    source: "#{land/frozen-dungeon}",
+    qty: 2,
+  },
+  {
+    source: "#{land/frozen-sleeping-statue}",
+  },
+  {
+    source: "#{land/frozen-ghost}",
+  },
+  {
+    source: "#{land/frozen-foxmage}",
+  },
+  {
+    source: "#{land/frozen-wizzards-battle}",
+  },
+  {
+    source: "#{land/frozen-chest}",
+  },
+  {
+    source: "#{land/skull-galaxy}",
+  },
+  {
+    source: "#{land/skull-dungeon}",
+    qty: 2,
+  },
+  {
+    source: "#{land/skull-braziers}",
+  },
+  {
+    source: "#{land/skull-gem-pillars}",
+  },
+  {
+    source: "#{land/skull-bells}",
+  },
+  {
+    source: "#{land/skull-jester}",
+  },
+  {
+    source: "#{land/skull-obelisk}",
+  },
+];
+
 
 
 /**

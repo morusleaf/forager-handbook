@@ -969,3 +969,30 @@ function renderDroids() {
     index++;
   }
 }
+
+
+
+function renderBigChests() {
+  let width = 135;
+  let height = 135;
+  let $panel = $("#big-chest-panel");
+  let scale = 0.25;
+  let index = 1;
+  for (let group of bigChestsList) {
+    let land = lookupName(group.source);
+    let qty = group.qty ? group.qty : 1;
+    let $pane = $("<div>", {
+      style: "display: inline-block",
+      class: "hover-wrapper",
+    }).appendTo($panel);
+    let $clickable = $("<a>", {
+      href: `land.html?${land.key}`,
+    }).appendTo($pane);
+    let $icon = land.thumbnailDOM(135,135,4,0.25).appendTo($clickable);
+    let indexStr = (qty == 1) ? `${index}` : `${index}-${index+qty-1}`;
+    let $title = $("<p>", {
+      class: "text-center",
+    }).html(`<b>${indexStr}</b>`).appendTo($pane);
+    index += qty;
+  }
+}
