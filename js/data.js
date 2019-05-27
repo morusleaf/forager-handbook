@@ -3702,6 +3702,7 @@ var objs_rawdata = {
     name: "史莱姆",
     desc: [
       "在购买1个地块后出现",
+      "跃起踩玩家",
     ],
     appear: [
       "#{land/grass-born 草地}",
@@ -3742,6 +3743,7 @@ var objs_rawdata = {
     desc: [
       "在#{land/skull-galaxy 墓地}拆除#{obj/grave}后有概率出现，也是#{land/skull-dungeon 骷髅迷宫}的常见杂兵",
       "可通过#{item/necro-rod}召唤",
+      "近身攻击",
     ],
     drop: [
       "#{item/bone}",
@@ -3751,6 +3753,7 @@ var objs_rawdata = {
     name: "大骷髅",
     desc: [
       "可通过#{item/necro-rod}召唤",
+      "近身攻击",
     ],
     appear: [
       "#{land/skull-galaxy 墓地}",
@@ -3777,6 +3780,7 @@ var objs_rawdata = {
   "floating-skull": {
     name: "浮空骷髅头",
     desc: [
+      "向四周发出火球"
     ],
     appear: [
       "#{land/fire-dungeon 火焰神庙}",
@@ -3788,6 +3792,7 @@ var objs_rawdata = {
   "demon-boss": {
     name: "恶魔boss",
     desc: [
+      "召唤3个漂浮骷髅",
     ],
     appear: [
       "#{land/fire-dungeon 火焰神庙}",
@@ -3821,6 +3826,7 @@ var objs_rawdata = {
   "thunder-spirit": {
     name: "雷精灵",
     desc: [
+      "鬼畜移动，摸到玩家就造成伤害",
     ],
     appear: [
       "#{land/ancient-dungeon 上古墓地}",
@@ -3832,14 +3838,20 @@ var objs_rawdata = {
   "thunder-spirit-boss": {
     name: "雷精灵boss",
     desc: [
+      "鬼畜移动"
     ],
     appear: [
       "#{land/ancient-dungeon 上古墓地}",
+    ],
+    drop: [
+      "#{item/steel}",
+      "#{item/seaweed}",
     ],
   },
   "wizrob": {
     name: "冰霜巫师",
     desc: [
+      "发射几个冰锥",
     ],
     appear: [
       "#{land/frozen-wizzards-battle}",
@@ -3852,6 +3864,7 @@ var objs_rawdata = {
   "wizrob-boss": {
     name: "冰霜巫师boss",
     desc: [
+      "发射6个冰锥",
     ],
     appear: [
       "#{land/frozen-dungeon 水晶洞窟}",
@@ -4134,13 +4147,15 @@ var objs_rawdata = {
     name: "蓝宝箱",
     desc: [
       "内含对应地牢的#{item/thunder-rod -法杖}和#{item/ancient-seal -印章}，以及银河的#{item/ancient-galaxy-seal -印章}",
+      "游戏中共46个大宝箱或蓝宝箱，可以参照我做的<a href='big-chest.html'>大宝箱汇总</a>收集",
     ],
   },
   "big-chest": {
     name: "大宝箱",
     desc: [
       "需用#{item/key}打开",
-      "内有#{item/spirit-orb}或#{item/fairy-aura -神器}"
+      "内有#{item/spirit-orb}或#{item/fairy-aura -神器}",
+      "游戏中共46个大宝箱或蓝宝箱，可以参照我做的<a href='big-chest.html'>大宝箱汇总</a>收集",
     ],
   },
   "electric-cube": {
@@ -4759,19 +4774,19 @@ var feats_rawdata = {
   "skillful": {
     name: "熟练",
     desc: [
-      "学会所有技能",
+      "学会所有<a href='skill.html'>技能</a>",
     ],
   },
   "imperialist": {
     name: "帝国主义者",
     desc: [
-      "买下所有土地",
+      "买下所有<a href='land.html'>土地</a>",
     ],
   },
   "treasure-master": {
     name: "宝藏大师",
     desc: [
-      "打开所有#{obj/big-chest}(46个)",
+      "打开所有#{obj/big-chest}(46个)，这是我做的<a href='big-chest.html'>大宝箱汇总</a>",
     ],
   },
   "tool-collector": {
