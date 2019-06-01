@@ -40,8 +40,9 @@ img {
 
 #info {
     top: 80px;
+    z-index: 1050;
 }
 
 .navbar {
-    z-index: 1050;
+    z-index: 1040;
 }

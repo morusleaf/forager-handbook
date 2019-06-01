@@ -2686,6 +2686,7 @@ var items_rawdata = {
     name: "毁灭者",
     desc: [
       "使用它能摧毁任何东西，甚至可以挖开土地",
+      "不要作死用它摧毁关键道具(如石像)导致无法解谜或无法解锁成就",
     ],
     ingrd: [
       "#{struct/factory}",
@@ -3101,6 +3102,7 @@ var lands_rawdata = {
     name: "草地-彩虹湖",
     desc: [
       "按照彩虹上的颜色依次打掉对应的蘑菇，奖励#{obj/big-chest}",
+      "据说蘑菇会被其它东西刷掉，导致之后无法解谜。建议刚解锁地块后就立即解谜",
       '顺序为<img src="img/other/mushroom-red.png"><img src="img/other/mushroom-orange.png"><img src="img/other/mushroom-yellow.png"><img src="img/other/mushroom-green.png"><img src="img/other/mushroom-blue.png"><img src="img/other/mushroom-purple.png">'
     ],
   },
@@ -3121,7 +3123,7 @@ var lands_rawdata = {
   "ancient-dungeon": {
     name: "沙漠-上古墓地",
     desc: [
-      '<a href="map-ancient-tomb.html">地图</a>，标注了3个隐藏房间',
+      '<a href="map-ancient-tomb.html">地图</a>，标注了3个秘密房间',
       "奖励#{obj/blue-chest}(2)内含#{item/thunder-rod} #{item/ancient-seal}",
     ],
   },
@@ -3193,7 +3195,7 @@ var lands_rawdata = {
   "fire-dungeon": {
     name: "焦土-火焰神庙",
     desc: [
-      '<a href="map-fire-temple.html">地图</a>，标注了4个隐藏房间',
+      '<a href="map-fire-temple.html">地图</a>，标注了4个秘密房间',
       "左上角有7个火盆，用火焰武器点燃它们可获得奖励",
       "右边有6个#{obj/volcano-pushdown-pillar}，按一定顺序按下它们会获得奖励，在左下角有两个#{obj/fairy}的房间地板上有提示",
       "奖励#{obj/blue-chest}(2)内含#{item/fire-rod} #{item/fire-seal}",
@@ -3222,7 +3224,7 @@ var lands_rawdata = {
   "fire-wizard-tower": {
     name: "焦土-巫师塔",
     desc: [
-      "塔内的书架可定时搜刮出卷轴，此外塔内还有一个隐藏房间",
+      "塔内的书架可定时搜刮出卷轴，此外塔内还有一个秘密房间",
       "巫师任务1：给予#{item/cinderbloom}(20)，奖励#{item/mandragora} #{item/liquid-luck} #{item/wisdom-draught}",
       "巫师任务2：给予#{item/green-pigment}(20)，奖励#{item/wizard-scroll}(2) #{item/sage-scroll}(2)",
       "巫师任务3：给予#{item/crystal}(200)，奖励#{obj/big-chest}内含#{item/magic-scepter}",
@@ -3275,7 +3277,7 @@ var lands_rawdata = {
   "frozen-dungeon": {
     name: "雪地-水晶洞窟",
     desc: [
-      '<a href="map-crystal-cave.html">地图</a>，标注了3个隐藏房间',
+      '<a href="map-crystal-cave.html">地图</a>，标注了3个秘密房间',
       "奖励#{obj/blue-chest}(2)内含#{item/ice-rod} #{item/frozen-seal}",
     ],
   },
@@ -3290,6 +3292,7 @@ var lands_rawdata = {
   "frozen-ghost": {
     name: "雪地-吓人鬼",
     desc: [
+      "小鬼处于隐身状态，要靠近了才能看见",
       "吓人鬼任务1：给予#{item/demon-horn}(2)，奖励#{obj/small-chest}",
       "吓人鬼任务2：给予#{item/kapala}，奖励#{obj/big-chest}",
     ],
@@ -3350,7 +3353,7 @@ var lands_rawdata = {
   "skull-dungeon": {
     name: "墓地-骷髅迷宫",
     desc: [
-      '<a href="map-skull-maze.html">地图</a>，标注了3个隐藏房间',
+      '<a href="map-skull-maze.html">地图</a>，标注了3个秘密房间',
       "地图中部有一个鲜血祭坛，可牺牲1点最大生命值换取一个#{buff/gluttony -永久性增益}",
       "奖励#{obj/blue-chest}内含#{item/necro-rod} #{item/skull-seal}",
     ],
@@ -4616,7 +4619,7 @@ var feats_rawdata = {
   "enlightened": {
     name: "启迪",
     desc: [
-      "找到所有秘密房间，某些墙壁上有裂缝，用#{item/bomb}或#{item/fire-rod}可以炸开进入秘密房间",
+      "找到所有秘密房间，某些墙壁上有裂缝，用#{item/bomb}或#{item/fire-rod}、#{item/thunder-rod}、#{item/ice-rod}可以炸开进入秘密房间",
       "我从游戏文件重构出了各地牢的地图，方便大家找秘密房间：#{land/ancient-dungeon}3个，#{land/skull-dungeon}3个，#{land/frozen-dungeon}3个，#{land/fire-dungeon}4个，#{land/fire-wizard-tower}1个 TODO",
     ],
   },
